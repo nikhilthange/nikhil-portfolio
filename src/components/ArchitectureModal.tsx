@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
-import { X, Cpu, Camera, MapPin, Zap, FileText, Mic, Sparkles, ShieldCheck, ArrowRight } from 'lucide-react';
+import { 
+  X, Cpu, Camera, MapPin, Zap, FileText, Mic, Sparkles, ShieldCheck, ArrowRight,
+  WifiOff, RefreshCw, Database, Activity
+} from 'lucide-react';
 import type { Project } from '../data/portfolioData';
+import { GithubIcon } from './Icons';
 
 interface ArchitectureModalProps {
   project: Project | null;
@@ -38,6 +42,14 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
         return <Sparkles className="w-4 h-4 text-purple-400" />;
       case 'ShieldCheck':
         return <ShieldCheck className="w-4 h-4 text-emerald-400" />;
+      case 'WifiOff':
+        return <WifiOff className="w-4 h-4 text-rose-400" />;
+      case 'RefreshCw':
+        return <RefreshCw className="w-4 h-4 text-[#00D9FF]" />;
+      case 'Database':
+        return <Database className="w-4 h-4 text-emerald-400" />;
+      case 'Activity':
+        return <Activity className="w-4 h-4 text-emerald-400" />;
       default:
         return <Zap className="w-4 h-4 text-[#00D9FF]" />;
     }
@@ -143,6 +155,18 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               >
                 <span>[ Live Deployment ]</span>
                 <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cyber-outline py-1.5 px-3 text-xs flex items-center gap-1.5 text-slate-300 hover:text-white hover:border-[#00D9FF]"
+                title="View GitHub Repository"
+              >
+                <GithubIcon className="w-3.5 h-3.5" />
+                <span>[ Code ]</span>
               </a>
             )}
             <button

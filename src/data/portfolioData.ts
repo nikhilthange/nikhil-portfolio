@@ -10,6 +10,8 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  badge?: string;
+  collaborators?: string;
   architecture: {
     title: string;
     flow: { step: string; title: string; desc: string; icon: string }[];
@@ -74,6 +76,10 @@ export const PERSONAL_INFO = {
     linkedin: "https://linkedin.com/in/nikhil-thange",
     github: "https://github.com/nikhilthange",
     smartCivic: "https://smart-civic-pi.vercel.app",
+    swasthyaSetu: "https://swastyasetu-three.vercel.app",
+    speaklingo: "https://github.com/nikhilthange/speaklingo",
+    smartExpense: "https://github.com/nikhilthange/Smart-Expense-Manager",
+    waExtractor: "https://github.com/nikhilthange/whatsapp-group-extractor",
     email: "mailto:nikhilthange75@gmail.com",
     resume: "/thangenikhil.pdf",
   },
@@ -123,6 +129,152 @@ export const FEATURED_PROJECTS: Project[] = [
         { step: "02", title: "YOLOv8 Inference", desc: "PyTorch/CUDA containerized vision pipeline classifies defect category with 91.4% mAP50 precision.", icon: "Cpu" },
         { step: "03", title: "Geospatial Deduplication", desc: "MongoDB 2dsphere compound index & Turf.js PIP verify ward boundaries and flag duplicate incidents within 35m.", icon: "MapPin" },
         { step: "04", title: "High-Concurrency Dispatch", desc: "PM2 clustered Node microservices cached with Redis TTL route tickets to field engineers in real-time.", icon: "Zap" }
+      ]
+    }
+  },
+  {
+    id: "swastyasetu",
+    title: "SwasthyaSetu | Rural Healthcare Continuity & Referral Layer",
+    subtitle: "Offline-First Distributed Sync, Hugging Face TrOCR & 2G GSM Fallback",
+    description: "A mission-critical offline-first healthcare continuity platform connecting rural Primary Health Centres (PHCs) and district hospitals. Guarantees zero referral loss during broadband blackouts through Dexie.js (IndexedDB) local queueing, idempotent auto-sync to PostgreSQL/Prisma backends, Hugging Face TrOCR prescription extraction, and ≤160-char 2G SMS emergency fallback.",
+    category: "Full Stack & AI",
+    featured: true,
+    badge: "HACKATHON INNOVATION",
+    collaborators: "Team Project with Aniket Vishwakarma",
+    technologies: [
+      "React 19", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM", 
+      "Dexie.js (IndexedDB)", "Hugging Face TrOCR", "Tailwind CSS", "JWT RBAC", "RESTful APIs", "GSM SMS Engine"
+    ],
+    liveUrl: "https://swastyasetu-three.vercel.app",
+    githubUrl: "https://github.com/aniketvishwakarma-11/Swastyasetu",
+    metrics: [
+      { label: "Offline Resilience", value: "100% Queue" },
+      { label: "Data Loss Prevention", value: "0% Loss" },
+      { label: "2G SMS Fallback", value: "≤160 Char" },
+      { label: "Care Roles", value: "4 Multi-Tenant" }
+    ],
+    highlights: [
+      "Offline-First Dexie.js Persistence: Engineered client-side IndexedDB caching via Dexie.js, guaranteeing zero data loss for patient vitals, emergency STEMI referrals, and clinical notes during rural broadband outages.",
+      "Server-Side Deduplication & Auto-Sync: Architected an idempotent background sync protocol (event_id hashing) reconciling local device records into PostgreSQL via Prisma ORM as soon as network connectivity is restored.",
+      "Hugging Face TrOCR Vision Pipeline: Integrated TrOCR transformer model for transcribing handwritten medical prescriptions and discharge summaries with human-in-the-loop split-screen clinician review.",
+      "Zero-Internet 2G SMS Compression Engine: Designed an ultra-compact GSM SMS fallback payload (≤160 characters) allowing ASHA workers and PHC staff to dispatch emergency referral handoffs over standard cellular text.",
+      "Patient Identity Reconciliation & District Telemetry: Built multi-field weighted fuzzy matching preventing duplicate master patient registrations, combined with live ICU bed capacity and ambulance transfer Kanban tracking."
+    ],
+    architecture: {
+      title: "SwasthyaSetu Offline-First Edge-to-Hospital Distributed Architecture",
+      flow: [
+        { step: "01", title: "Offline Capture & Dexie Queue", desc: "Frontline PHC staff enter emergency referrals and vitals; data is persisted instantly in local IndexedDB.", icon: "WifiOff" },
+        { step: "02", title: "Idempotent Auto-Sync", desc: "Background sync engine detects connectivity restoration, streaming queued referrals to PostgreSQL with server deduplication.", icon: "RefreshCw" },
+        { step: "03", title: "TrOCR AI Vision & OCR", desc: "Hugging Face TrOCR transcribes handwritten discharge summaries with split-screen clinician verification.", icon: "Sparkles" },
+        { step: "04", title: "District Dispatch & Telemetry", desc: "District hospital dashboard orchestrates ambulance transit, bed allocation, and GSM SMS transport slips.", icon: "Zap" }
+      ]
+    }
+  },
+  {
+    id: "speaklingo",
+    title: "SpeakLingo | Real-Time WebRTC Language Studio & AI Coach",
+    subtitle: "Low-Latency Peer Matchmaking, AI Speech Synthesis & Live IELTS Telemetry",
+    description: "A full-stack WebRTC conversational English learning studio engineered for low-latency peer-to-peer matchmaking and 24/7 AI tutor coaching. Features 360° radar matching across CEFR levels (A1–C2), live Web Speech API subtitles, real-time grammar slip feedback, and in-browser Web Audio synthesized acoustic telemetry.",
+    category: "Full Stack & AI",
+    featured: true,
+    badge: "REAL-TIME WEBRTC STUDIO",
+    technologies: [
+      "React 19", "JavaScript (ES6+)", "WebRTC (RTCPeerConnection)", "Socket.IO", 
+      "Node.js", "Express.js", "Tailwind CSS", "Web Speech API", "Web Audio API", "Google STUN"
+    ],
+    githubUrl: "https://github.com/nikhilthange/speaklingo",
+    metrics: [
+      { label: "P2P Latency", value: "<120ms" },
+      { label: "Video Stream", value: "720p 60fps" },
+      { label: "CEFR Tiers", value: "A1 to C2" },
+      { label: "AI Availability", value: "24/7 Solo" }
+    ],
+    highlights: [
+      "WebRTC & Socket.IO Signaling Mesh: Architected peer-to-peer audio/video streaming with ICE trickling and Google STUN fallback, sustaining sub-120ms transmission latency with hardware loopback tests.",
+      "CEFR-Level Matchmaking Radar: Engineered an interactive 360° radar matchmaking queue pairing global learners by interest tags (Tech, Travel, Cinema) and CEFR fluency bands with instant AI fallback.",
+      "Live AI Speech Coach & IELTS HUD: Built real-time grammar slip detection and Band 8+ vocabulary upgrade recommendations, paired with timed IELTS Part 2 cue cards and Taboo fluency drills.",
+      "24/7 AI English Tutor (Emma): Integrated in-browser speech synthesis for conversational solo practice with zero latency and natural voice cadence.",
+      "Web Audio API & Speech Subtitles: Implemented real-time STT live subtitles via Web Speech API alongside synthesized acoustic chimes, eliminating external media asset overhead."
+    ],
+    architecture: {
+      title: "SpeakLingo Low-Latency WebRTC & AI Coaching Architecture",
+      flow: [
+        { step: "01", title: "Matchmaking & STUN Signaling", desc: "Socket.IO server executes CEFR-based queueing, exchanging SDP offers and ICE candidates via Google STUN servers.", icon: "Zap" },
+        { step: "02", title: "P2P WebRTC Media Pipe", desc: "Direct peer-to-peer encrypted media stream established for 720p 60fps video and adaptive audio with loopback calibration.", icon: "Activity" },
+        { step: "03", title: "Web Speech & Real-Time Subtitles", desc: "In-browser Web Speech API captures audio frames, rendering live bidirectional subtitles with zero cloud latency.", icon: "Mic" },
+        { step: "04", title: "AI Coaching & IELTS Telemetry", desc: "Grammar evaluation engine analyzes speech patterns, offering Band 8+ vocabulary alternatives and spaced repetition flashcards.", icon: "Sparkles" }
+      ]
+    }
+  },
+  {
+    id: "smart-expense",
+    title: "Smart Expense Manager | FinTech Capital Telemetry Platform",
+    subtitle: "High-Precision Personal Capital Telemetry, AI Forecasting & Tesseract OCR Pipeline",
+    description: "An enterprise-grade, venture-backed personal financial management system benchmarked against CRED, Mercury, and Apple Wallet. Features real-time multi-account balance synchronization (UPI, Cards, Banks), Tesseract.js receipt OCR extraction, NVIDIA NIM AI cash runway projections, Redis caching, and automated MongoDB aggregation pipelines.",
+    category: "Full Stack & AI",
+    featured: true,
+    badge: "FINTECH CAPITAL TELEMETRY",
+    technologies: [
+      "React 18", "TypeScript", "Node.js", "Express.js", "MongoDB Atlas", "Redis", 
+      "Tesseract.js OCR", "NVIDIA NIM AI", "Docker Compose", "Tailwind CSS", "Playwright E2E", "Jest"
+    ],
+    githubUrl: "https://github.com/nikhilthange/Smart-Expense-Manager",
+    metrics: [
+      { label: "Bundle Payload", value: "-70% Chunk" },
+      { label: "Design Standard", value: "9.7 / 10" },
+      { label: "Redis Latency", value: "sub-30ms" },
+      { label: "PWA Readiness", value: "100% Offline" }
+    ],
+    highlights: [
+      "FinTech Capital Telemetry Engine: Engineered multi-account balance synchronization (UPI, Cards, Bank Accounts) with MongoDB aggregation pipelines computing Month-over-Month category shift deltas and savings velocity.",
+      "Tesseract.js Receipt OCR Extraction: Automated paper receipt and invoice digestion via client-side/server-side Tesseract.js OCR pipeline, auto-populating merchant, tax, and itemized spend categories.",
+      "AI Financial Intelligence & Cash Runway: Integrated NVIDIA NIM AI advisory models generating personalized cash runway projections, risk matrix evaluations, and anomaly spend detection.",
+      "Zero-Leak Security Architecture: Implemented stateless short-lived 15-minute JWT access tokens paired with rotating HttpOnly refresh cookies, multi-tenant RBAC, and encrypted MongoDB audit logs.",
+      "Production DevOps & Testing: Configured multi-stage Docker Compose orchestrations, Playwright E2E testing suites, and Jest unit test coverage integrated into GitHub Actions CI/CD."
+    ],
+    architecture: {
+      title: "Smart Expense Manager Edge-to-Cloud FinTech Architecture",
+      flow: [
+        { step: "01", title: "Receipt Ingestion & Tesseract OCR", desc: "Frontline receipt camera upload is processed via Tesseract.js OCR, extracting merchant, amount, and timestamp.", icon: "Camera" },
+        { step: "02", title: "Stateless Auth & RBAC Guard", desc: "Express middleware validates short-lived JWTs and rotates HttpOnly refresh cookies across user and admin roles.", icon: "ShieldCheck" },
+        { step: "03", title: "Aggregations & Redis Caching", desc: "MongoDB aggregation pipelines calculate category shift deltas, cached in Redis TTL keys for sub-30ms P95 queries.", icon: "Database" },
+        { step: "04", title: "AI Cash Runway Telemetry", desc: "NVIDIA NIM / AI analytics engine evaluates 30-day cash runway, anomaly spending spikes, and automated budget alerts.", icon: "Sparkles" }
+      ]
+    }
+  },
+  {
+    id: "whatsapp-extractor",
+    title: "WhatsApp Group Contact Extractor & Automated Ledger",
+    subtitle: "Headless Puppeteer Automation, Real-Time Socket.IO Streaming & Excel / vCard Pipeline",
+    description: "A high-performance automation engine and web telemetry dashboard built with Node.js, Express, Socket.IO, and headless Chromium (whatsapp-web.js). Features persistent session caching via LocalAuth, low-memory footprint garbage collection (≤256MB), and batch extraction of multi-thousand member groups into formatted Excel (.xlsx), CSV, and phone-ready .vcf vCards.",
+    category: "Cloud & Distributed Systems",
+    featured: true,
+    badge: "HEADLESS BROWSER AUTOMATION",
+    technologies: [
+      "Node.js", "Express.js", "whatsapp-web.js", "Puppeteer", "Socket.IO", 
+      "ExcelJS / XLSX", "vCard (.vcf)", "HTML5 / Vanilla CSS", "LocalAuth Caching"
+    ],
+    githubUrl: "https://github.com/nikhilthange/whatsapp-group-extractor",
+    metrics: [
+      { label: "Memory Footprint", value: "≤256 MB" },
+      { label: "Privacy / PII", value: "100% Local" },
+      { label: "Group Capacity", value: "10,000+" },
+      { label: "Export Formats", value: "3 Types" }
+    ],
+    highlights: [
+      "Headless Puppeteer Automation: Integrated whatsapp-web.js with Chromium headless instances, automating session authentication, group DOM enumeration, and contact extraction.",
+      "Real-Time Socket.IO Streaming: Built WebSocket bi-directional channels streaming QR code authentication terminals, real-time extraction progress meters, and dynamic group selection menus.",
+      "Multi-Format Data Pipeline: Engineered high-throughput serialization pipelines outputting styled Excel (.xlsx) workbooks with custom column formatting, CSV sheets, and Apple/Android-compatible vCard (.vcf) contacts.",
+      "Low-Footprint Memory Engineering: Designed garbage-collected process orchestration (--max-old-space-size=256) preventing memory leaks during large-scale thousand-member group crawls.",
+      "Client-Side Audit & Search Dashboard: Responsive interactive web dashboard supporting drag-and-drop file inspection, phone number deduplication, admin status filtering, and clipboard batch copy."
+    ],
+    architecture: {
+      title: "WhatsApp Extractor Headless Automation & Stream Pipeline",
+      flow: [
+        { step: "01", title: "LocalAuth & QR Handshake", desc: "Headless Chromium instance initializes whatsapp-web.js; terminal QR code streams to web client over Socket.IO.", icon: "Zap" },
+        { step: "02", title: "Group & Participant Ingestion", desc: "Chromium DOM walker extracts participant JIDs, phone numbers, contact names, and admin permissions into memory buffer.", icon: "Database" },
+        { step: "03", title: "Low-Footprint Deduplication", desc: "Node.js streaming transform filters out duplicate entries and formats phone numbers while keeping memory <=256MB.", icon: "Cpu" },
+        { step: "04", title: "Multi-Format Export & vCard", desc: "Generates formatted Excel (.xlsx) workbooks, CSV tables, and import-ready vCard (.vcf) contacts for mobile address books.", icon: "FileText" }
       ]
     }
   },
@@ -330,6 +482,10 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "  whoami       - View Nikhil's executive engineer profile",
       "  skills       - List core technical competencies by stack",
       "  projects     - View featured production & hackathon projects",
+      "  swastyasetu  - Deep-dive into SwasthyaSetu healthcare architecture",
+      "  speaklingo   - Inspect SpeakLingo WebRTC & AI language platform",
+      "  expense      - Inspect Smart Expense Manager FinTech architecture",
+      "  extractor    - Inspect WhatsApp contact extractor automation engine",
       "  experience   - Display professional engineering experience",
       "  metrics      - Display latency, throughput, and system benchmarks",
       "  education    - Display academic background and qualifications",
@@ -354,9 +510,9 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     output: [
       "• Frontend: React 19, Next.js, TypeScript, TanStack Query, Redux Toolkit, Tailwind CSS, WebSockets",
       "• Backend: Node.js, Express.js, RESTful APIs, OpenAPI/Swagger, PM2 Clusters, JWT, RBAC",
-      "• AI / ML: YOLOv8, PyTorch, NVIDIA NIM LLMs, Laplacian Blur Edge Triage, Turf.js GIS",
-      "• Databases & Cache: MongoDB (2dsphere), PostgreSQL, Redis (TTL Caching), Mongoose Pooling",
-      "• Cloud & DevOps: AWS (EC2, S3, CloudFront), Docker, Nginx, GitHub Actions CI/CD, Jest, Supertest"
+      "• AI / ML: YOLOv8, PyTorch, NVIDIA NIM LLMs, Laplacian Blur Edge Triage, Turf.js GIS, Hugging Face TrOCR, Tesseract.js",
+      "• Databases & Cache: MongoDB (2dsphere & Aggregations), PostgreSQL, Prisma ORM, Redis (TTL Caching), Dexie.js (IndexedDB)",
+      "• Cloud & DevOps: AWS (EC2, S3, CloudFront), Docker Compose, Nginx, GitHub Actions CI/CD, Playwright E2E, Jest, Puppeteer"
     ]
   },
   "projects": {
@@ -365,8 +521,68 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "1. [CityOS] BMC Smart Civic Operating System",
       "   - YOLOv8 (91.4% mAP50), PM2 500+ req/s, 2dsphere GIS deduplication, React 19 PWA",
       "   - Demo: https://smart-civic-pi.vercel.app",
-      "2. [Interview AI] AI-Powered Recruitment Intelligence Platform",
+      "2. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (Hackathon Project)",
+      "   - Dexie.js IndexedDB, 0% data loss sync, Hugging Face TrOCR, PostgreSQL & Prisma, 2G SMS Fallback",
+      "   - Team: Nikhil Thange & Aniket Vishwakarma",
+      "   - Demo: https://swastyasetu-three.vercel.app | Repo: https://github.com/aniketvishwakarma-11/Swastyasetu",
+      "3. [Smart Expense] FinTech Capital Telemetry Platform",
+      "   - Tesseract.js OCR, NVIDIA NIM cash runway, MongoDB aggregations, sub-30ms Redis",
+      "   - Repo: https://github.com/nikhilthange/Smart-Expense-Manager",
+      "4. [SpeakLingo] Real-Time WebRTC Language Studio & AI Coach",
+      "   - WebRTC P2P (<120ms), CEFR Radar Matchmaking, Live IELTS HUD, AI Speech Synthesis",
+      "   - Repo: https://github.com/nikhilthange/speaklingo",
+      "5. [WhatsApp Extractor] Headless Puppeteer Automation & Contact Ledger",
+      "   - whatsapp-web.js, Socket.IO live stream, Excel / CSV / vCard, <=256MB memory cap",
+      "   - Repo: https://github.com/nikhilthange/whatsapp-group-extractor",
+      "6. [Interview AI] AI-Powered Recruitment Intelligence Platform",
       "   - NVIDIA NIM LLMs streaming (<300ms), 88% ATS match accuracy, Multi-tenant RBAC"
+    ]
+  },
+  "extractor": {
+    title: "WhatsApp Group Contact Extractor & Automated Ledger",
+    output: [
+      "Role: Creator & Lead Backend Systems Developer",
+      "Repository: https://github.com/nikhilthange/whatsapp-group-extractor",
+      "Automation Engine: whatsapp-web.js & Headless Chromium with LocalAuth session persistence",
+      "Real-Time Telemetry: Socket.IO bi-directional WebSocket streaming for QR login & extraction progress",
+      "Data Pipeline: Multi-format exports (.xlsx Excel workbooks, CSV, and phone-ready .vcf vCards)",
+      "Performance: Constrained to <=256MB memory cap with explicit garbage collection flags"
+    ]
+  },
+  "swastyasetu": {
+    title: "SwasthyaSetu — Offline-First Rural Healthcare Continuity Layer",
+    output: [
+      "Role: Full Stack & Systems Architecture (Hackathon Project)",
+      "Team: Nikhil Thange & Aniket Vishwakarma",
+      "Core Innovation: 100% offline-first referral survival with Dexie.js (IndexedDB) & auto-reconnect sync",
+      "AI Pipeline: Hugging Face TrOCR vision transformer transcribes cursive handwritten medical prescriptions",
+      "Emergency Fallback: ≤160-character compressed GSM SMS transport payload for zero-connectivity zones",
+      "Backend & DB: Node.js, Express.js, PostgreSQL with Prisma ORM connection pooling & idempotent event_id sync",
+      "Live Deployment: https://swastyasetu-three.vercel.app",
+      "GitHub Repository: https://github.com/aniketvishwakarma-11/Swastyasetu"
+    ]
+  },
+  "expense": {
+    title: "Smart Expense Manager — FinTech Capital Telemetry Platform",
+    output: [
+      "Role: Lead Full Stack & FinTech Systems Architect",
+      "Repository: https://github.com/nikhilthange/Smart-Expense-Manager",
+      "Benchmark: Evaluated at 9.7/10 Recruiter Standard (CRED / Apple Wallet inspired UX)",
+      "Core Engines: Multi-account ledgering, Tesseract.js receipt OCR, and MongoDB aggregations",
+      "AI & Projections: NVIDIA NIM AI cash runway forecasting and anomaly spend detection",
+      "Performance: 70% bundle reduction with lazy Recharts chunks & sub-30ms Redis caching",
+      "DevOps: Docker Compose, Playwright E2E, Jest, and Swagger API documentation"
+    ]
+  },
+  "speaklingo": {
+    title: "SpeakLingo — Real-Time WebRTC Language Studio & AI Coach",
+    output: [
+      "Role: Creator & Lead Full Stack Architect",
+      "Repository: https://github.com/nikhilthange/speaklingo",
+      "Signaling & Streaming: WebRTC (RTCPeerConnection), Socket.IO, Google STUN servers (<120ms P2P latency)",
+      "Matchmaking Engine: 360° radar sweep matching global users across CEFR tiers (A1–C2) and topic tags",
+      "AI & Audio: 24/7 AI tutor (Emma), Web Speech API live subtitles, and Web Audio API synthesized chimes",
+      "HUD Features: Live grammar slip correction, IELTS Part 2 cue cards, and spaced repetition flashcards"
     ]
   },
   "experience": {
@@ -384,6 +600,7 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     output: [
       "• 500+ req/s sustained concurrent operations (sub-50ms P95 latency)",
       "• 91.4% mAP50 precision on 6-class YOLOv8 custom vision triage",
+      "• 100% offline referral queue survival via Dexie.js IndexedDB with 0% data loss",
       "• <800ms First Contentful Paint (FCP) on React 19 video feeds",
       "• <300ms perceived latency for NVIDIA NIM LLM token streaming over WebSockets",
       "• 95% image payload compression via in-browser Canvas API pipeline"
@@ -414,7 +631,11 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "• Phone: (+91) 9820078156",
       "• LinkedIn: https://linkedin.com/in/nikhil-thange",
       "• GitHub: https://github.com/nikhilthange",
-      "• Portfolio & Civic System: https://smart-civic-pi.vercel.app"
+      "• Smart Expense: https://github.com/nikhilthange/Smart-Expense-Manager",
+      "• SpeakLingo: https://github.com/nikhilthange/speaklingo",
+      "• WhatsApp Extractor: https://github.com/nikhilthange/whatsapp-group-extractor",
+      "• SwasthyaSetu: https://swastyasetu-three.vercel.app",
+      "• Smart Civic CityOS: https://smart-civic-pi.vercel.app"
     ]
   },
   "hire": {

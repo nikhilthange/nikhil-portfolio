@@ -12,7 +12,7 @@ export const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeProjectModal, setActiveProjectModal] = useState<Project | null>(null);
 
-  const categories = ['All', 'Full Stack & AI', 'AI & LLMs'];
+  const categories = ['All', 'Full Stack & AI', 'Cloud & Distributed Systems', 'AI & LLMs'];
 
   const filteredProjects = selectedCategory === 'All' 
     ? FEATURED_PROJECTS 
@@ -68,10 +68,22 @@ export const Projects: React.FC = () => {
                   <span className="text-[10px] sm:text-[11px] font-space tracking-widest uppercase text-[#00D9FF] bg-[#00D9FF]/10 px-2 py-0.5 border border-[#00D9FF]/30">
                     {project.category}
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    FEATURED_ARCHITECTURE
-                  </span>
+                  {project.badge ? (
+                    <span className="text-[10px] sm:text-[11px] font-mono text-amber-300 flex items-center gap-1.5 bg-amber-400/10 px-2 py-0.5 border border-amber-400/30">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                      {project.badge}
+                    </span>
+                  ) : (
+                    <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                      FEATURED_ARCHITECTURE
+                    </span>
+                  )}
+                  {project.collaborators && (
+                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 border border-white/10 px-2 py-0.5 bg-white/5">
+                      👥 {project.collaborators}
+                    </span>
+                  )}
                 </div>
 
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-space font-medium text-white tracking-wide uppercase mt-1.5 leading-snug">
@@ -111,10 +123,15 @@ export const Projects: React.FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-black border border-white/20 text-slate-300 hover:text-white hover:border-[#00D9FF] transition-colors"
-                    aria-label="GitHub Repository"
+                    className={`${
+                      !project.liveUrl ? 'btn-cyber-primary' : 'btn-cyber-outline'
+                    } py-1.5 px-2.5 sm:px-3 text-[10px] sm:text-[11px] flex-1 sm:flex-initial flex items-center justify-center gap-1.5 ${
+                      project.liveUrl ? 'text-slate-300 hover:text-white hover:border-[#00D9FF]' : ''
+                    }`}
+                    title="View GitHub Repository"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
+                    <span>[ GitHub Repo ]</span>
                   </a>
                 )}
               </div>
