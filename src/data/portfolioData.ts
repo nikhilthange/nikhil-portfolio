@@ -62,8 +62,8 @@ export const PERSONAL_INFO = {
   role: "Full Stack Software Engineer",
   taglines: [
     "Full Stack Software Engineer",
-    "High-Concurrency Microservices Architect",
-    "Computer Vision & AI Pipeline Builder",
+    "Distributed Backend & Microservices Engineer",
+    "Computer Vision & AI Systems Developer",
     "React 19 & TypeScript Specialist"
   ],
   bio: "Full Stack Software Engineer specializing in high-concurrency microservices, reactive React 19/TypeScript architectures, and computer vision AI pipelines. Engineered distributed backends sustaining 500+ concurrent requests (sub-50ms P95) with Redis/MongoDB and deployed production applications on AWS. Dedicated to writing clean, test-driven code (Jest/Vitest) and automating CI/CD release cycles.",
@@ -71,7 +71,7 @@ export const PERSONAL_INFO = {
   timezone: "Asia/Kolkata (IST, UTC+5:30)",
   email: "nikhilthange75@gmail.com",
   phone: "+91 9820078156",
-  availability: "Available for Full-time Roles & High-Impact Opportunities",
+  availability: "Open to SDE Intern & Full-Time Software Engineering Roles (2026–2027)",
   socials: {
     linkedin: "https://linkedin.com/in/nikhil-thange",
     github: "https://github.com/nikhilthange",
@@ -210,7 +210,7 @@ export const FEATURED_PROJECTS: Project[] = [
     id: "smart-expense",
     title: "Smart Expense Manager | FinTech Capital Telemetry Platform",
     subtitle: "High-Precision Personal Capital Telemetry, AI Forecasting & Tesseract OCR Pipeline",
-    description: "An enterprise-grade, venture-backed personal financial management system benchmarked against CRED, Mercury, and Apple Wallet. Features real-time multi-account balance synchronization (UPI, Cards, Banks), Tesseract.js receipt OCR extraction, NVIDIA NIM AI cash runway projections, Redis caching, and automated MongoDB aggregation pipelines.",
+    description: "A high-precision personal capital telemetry and FinTech platform benchmarked against modern enterprise banking architectures (CRED, Mercury, Apple Wallet). Features real-time multi-account balance synchronization (UPI, Cards, Banks), Tesseract.js receipt OCR extraction, NVIDIA NIM AI cash runway projections, Redis caching, and automated MongoDB aggregation pipelines.",
     category: "Full Stack & AI",
     featured: true,
     badge: "FINTECH CAPITAL TELEMETRY",
@@ -285,11 +285,11 @@ export const FEATURED_PROJECTS: Project[] = [
     description: "An intelligent technical hiring engine featuring sub-300ms real-time AI interview evaluations with NVIDIA NIM LLMs, automated ATS semantic resume parsing, and multi-tenant enterprise RBAC security.",
     category: "AI & LLMs",
     featured: true,
+    badge: "AI STREAMING ARCHITECTURE",
     technologies: [
       "React 19", "Node.js", "Express.js", "NVIDIA NIM LLMs", "Socket.IO", 
       "PostgreSQL", "MongoDB", "JWT", "Tailwind CSS", "WebSockets"
     ],
-    liveUrl: "https://smart-civic-pi.vercel.app",
     githubUrl: "https://github.com/nikhilthange",
     metrics: [
       { label: "Streaming Latency", value: "<300ms" },
@@ -565,9 +565,9 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
   "expense": {
     title: "Smart Expense Manager — FinTech Capital Telemetry Platform",
     output: [
-      "Role: Lead Full Stack & FinTech Systems Architect",
+      "Role: Creator & Lead Full Stack FinTech Developer",
       "Repository: https://github.com/nikhilthange/Smart-Expense-Manager",
-      "Benchmark: Evaluated at 9.7/10 Recruiter Standard (CRED / Apple Wallet inspired UX)",
+      "Benchmark: Engineered to enterprise consumer FinTech UX standards (CRED & Mercury inspired UX)",
       "Core Engines: Multi-account ledgering, Tesseract.js receipt OCR, and MongoDB aggregations",
       "AI & Projections: NVIDIA NIM AI cash runway forecasting and anomaly spend detection",
       "Performance: 70% bundle reduction with lazy Recharts chunks & sub-30ms Redis caching",

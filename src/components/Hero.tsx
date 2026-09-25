@@ -30,8 +30,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
         setDisplayedText(currentTagline.substring(0, displayedText.length - 1));
       }, 30);
     } else if (isDeleting && displayedText.length === 0) {
-      setIsDeleting(false);
-      setTaglineIndex((prev) => (prev + 1) % PERSONAL_INFO.taglines.length);
+      timer = window.setTimeout(() => {
+        setIsDeleting(false);
+        setTaglineIndex((prev) => (prev + 1) % PERSONAL_INFO.taglines.length);
+      }, 180);
     }
 
     return () => clearTimeout(timer);
@@ -40,10 +42,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
   return (
     <section id="hero" className="relative min-h-[90vh] sm:min-h-[95vh] flex flex-col justify-center pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 cyber-glow-bg cyber-grid">
       <div className="max-w-6xl mx-auto w-full space-y-6 sm:space-y-8 relative z-10 text-left">
-        {/* Status Callout */}
-        <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-black/80 border border-[#00D9FF]/40 text-[#00D9FF] text-[10px] sm:text-xs font-space tracking-[0.15em] sm:tracking-[0.2em] uppercase">
-          <span className="w-2 h-2 rounded-full bg-[#00D9FF] animate-pulse shrink-0" />
-          <span>SYSTEM_INIT // PROTOCOL_ONLINE</span>
+        {/* Status Callouts */}
+        <div className="flex flex-wrap items-center gap-2.5">
+          <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-black/80 border border-[#00D9FF]/40 text-[#00D9FF] text-[10px] sm:text-xs font-space tracking-[0.15em] sm:tracking-[0.2em] uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#00D9FF] animate-pulse shrink-0" />
+            <span>SYSTEM_INIT // PROTOCOL_ONLINE</span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-mono uppercase">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span>AVAILABLE: SDE INTERN & FULL-TIME (2026–2027)</span>
+          </div>
         </div>
 
         {/* Massive Name Typography */}
@@ -52,8 +61,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
             NIKHIL <span className="text-[#00D9FF] font-semibold">THANGE</span>
           </h1>
 
-          <div className="text-[11px] xs:text-xs sm:text-sm md:text-base font-space tracking-[0.15em] sm:tracking-[0.3em] md:tracking-[0.4em] text-[#8BE9FD] uppercase font-light leading-relaxed">
-            FULL STACK SOFTWARE ENGINEER // HIGH-CONCURRENCY MICROSERVICES & AI PIPELINES
+          <div className="text-[11px] xs:text-xs sm:text-sm md:text-base font-space tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.35em] text-[#8BE9FD] uppercase font-light leading-relaxed">
+            FULL STACK SOFTWARE ENGINEER // DISTRIBUTED SYSTEMS & AI PIPELINES
           </div>
         </div>
 

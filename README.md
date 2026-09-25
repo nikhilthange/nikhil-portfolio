@@ -1,32 +1,100 @@
-# React + TypeScript + Vite
+# ⚡ Nikhil Thange — Full Stack & AI Systems Engineering Dossier
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+[![React 19](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
-Currently, two official plugins are available:
+> **Live Deployment:** [nikhilthange.vercel.app](https://nikhilthange.vercel.app) *(or active deployment URL)*  
+> **Candidate Dossier:** Full Stack Software Engineer specializing in distributed microservices, computer vision pipelines, and reactive React 19 architectures.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Architectural Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repository hosts the official engineering portfolio of **Nikhil Ankush Thange**. Designed around a high-performance **Cyber-HUD (Heads-Up Display) / Mission Control** aesthetic, the application demonstrates production frontend practices, sub-second initial paint times, interactive developer tooling, and end-to-end systems documentation.
 
-## Expanding the Oxlint configuration
+### Key Capabilities
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Interactive Developer CLI Shell (`Ctrl + K` / `~`):** A custom virtual terminal emulator with command parsing (`whoami`, `projects`, `metrics`, `swastyasetu`, `hire`, `clear`).
+- **Interactive Architecture Dataflow Modals:** Deep-dive visual pipeline diagrams for complex systems (YOLOv8 edge-to-cloud inference, Dexie.js offline-first synchronization, WebRTC signaling mesh).
+- **In-Browser ATS Resume Dossier:** Direct PDF inspection modal and instantaneous download support for `Nikhil_Thange_Resume.pdf`.
+- **Preloader with Session Intelligence:** Non-blocking cinematic intro that automatically caches to `sessionStorage` and provides instant `[ ESC ]` skip for high-volume recruiter screening.
+- **Production Form Transmission:** Functional recruiter message dispatch with real-time feedback and direct `mailto:` fallback guarantee.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+---
+
+## 🛠️ Featured Engineering Projects Documented
+
+| System | Domain | Core Stack | Key Metric |
+| :--- | :--- | :--- | :--- |
+| **CityOS** | Civic Tech & CV | React 19, YOLOv8, PyTorch, Node.js, Redis, MongoDB 2dsphere | 91.4% mAP50 • 500+ req/s P95 |
+| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), Hugging Face TrOCR, Prisma, GSM SMS | 100% Offline Survival • 0% Data Loss |
+| **SpeakLingo** | Real-Time WebRTC | React 19, WebRTC, Socket.IO, Web Speech API, Google STUN | &lt;120ms P2P Latency • 60fps Stream |
+| **Smart Expense** | FinTech Telemetry | React 18, TypeScript, Tesseract.js OCR, NVIDIA NIM, Redis, Docker | sub-30ms Redis • 70% Chunk Reduction |
+| **WhatsApp Extractor** | Headless Automation | Node.js, Puppeteer, whatsapp-web.js, Socket.IO, ExcelJS | &le;256MB RAM Cap • 10k+ Contact Crawls |
+| **Interview AI** | LLM Streaming | React 19, NVIDIA NIM LLMs, WebSockets, Multi-Tenant RBAC | &lt;300ms Token Stream • 88% ATS Match |
+
+---
+
+## ⚡ Tech Stack & Tooling
+
+- **Core Framework:** React 19 (Hooks, Concurrent Mode, TypeScript)
+- **Bundler & Build Tool:** Vite 8 with HMR (Hot Module Replacement)
+- **Styling:** Vanilla CSS + Tailwind CSS (Cyberpunk tokens, custom glowing borders, grid patterns)
+- **Icons & Typography:** Lucide React, Google Fonts (`Space Grotesk`, `JetBrains Mono`, `Inter`)
+- **Particle & Canvas Physics:** Custom Canvas Neural Mesh + Canvas Confetti
+- **Code Quality:** Oxlint + TypeScript strict compiler (`tsc -b`)
+
+---
+
+## 💻 Local Development & Build
+
+### Prerequisites
+- Node.js (v18.0.0 or higher recommended)
+- npm or yarn or pnpm
+
+### Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/nikhilthange/nikhilthangeportfoli.git
+
+# 2. Navigate into project directory
+cd nikhilthangeportfoli
+
+# 3. Install dependencies
+npm install
+
+# 4. Start local development server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Visit `http://localhost:5173` to explore the portfolio locally.
+
+### Production Build & Linting
+
+```bash
+# Typecheck & build optimized production bundle
+npm run build
+
+# Run Oxlint static analysis
+npm run lint
+
+# Preview production build locally
+npm run preview
+```
+
+---
+
+## 📬 Contact & Channel Verification
+
+- **Email:** [nikhilthange75@gmail.com](mailto:nikhilthange75@gmail.com)
+- **LinkedIn:** [linkedin.com/in/nikhil-thange](https://linkedin.com/in/nikhil-thange)
+- **GitHub:** [github.com/nikhilthange](https://github.com/nikhilthange)
+- **Location:** Mumbai, MH, India (UTC+5:30 IST)
+
+---
+
+*© 2026 Nikhil Ankush Thange. Built with React 19, TypeScript & Vite.*
