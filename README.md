@@ -30,7 +30,7 @@ This repository hosts the official engineering portfolio of **Nikhil Ankush Than
 | System | Domain | Core Stack | Key Metric |
 | :--- | :--- | :--- | :--- |
 | **CityOS** | Civic Tech & CV | React 19, YOLOv8, PyTorch, Node.js, Redis, MongoDB 2dsphere | 91.4% mAP50 • 500+ req/s P95 |
-| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), Hugging Face TrOCR, Prisma, GSM SMS | 100% Offline Survival • 0% Data Loss |
+| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), TrOCR, Prisma, GSM SMS | **Top 7 Finalist (MUSA Codex)** • 100% Offline Survival |
 | **SpeakLingo** | Real-Time WebRTC | React 19, WebRTC, Socket.IO, Web Speech API, Google STUN | &lt;120ms P2P Latency • 60fps Stream |
 | **Smart Expense** | FinTech Telemetry | React 18, TypeScript, Tesseract.js OCR, NVIDIA NIM, Redis, Docker | sub-30ms Redis • 70% Chunk Reduction |
 | **WhatsApp Extractor** | Headless Automation | Node.js, Puppeteer, whatsapp-web.js, Socket.IO, ExcelJS | &le;256MB RAM Cap • 10k+ Contact Crawls |

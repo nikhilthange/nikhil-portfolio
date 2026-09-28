@@ -1,6 +1,6 @@
 import React from 'react';
-import { Calendar, MapPin } from 'lucide-react';
-import { WORK_EXPERIENCE } from '../data/portfolioData';
+import { Calendar, MapPin, Trophy, Award, Sparkles } from 'lucide-react';
+import { WORK_EXPERIENCE, ACHIEVEMENTS } from '../data/portfolioData';
 
 export const Experience: React.FC = () => {
   return (
@@ -109,6 +109,70 @@ export const Experience: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Honors, Hackathons & Professional Certifications */}
+      <div className="mt-10 sm:mt-12 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-white/10">
+          <div className="text-[10px] sm:text-xs font-space tracking-widest text-[#00D9FF] uppercase font-semibold flex items-center gap-2">
+            <Trophy className="w-3.5 h-3.5 text-[#00D9FF]" />
+            <span>HONORS // HACKATHONS & CERTIFICATIONS</span>
+          </div>
+          <span className="text-[10px] font-mono text-slate-400">
+            {ACHIEVEMENTS.length} VERIFIED RECOGNITIONS
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {ACHIEVEMENTS.map((ach) => {
+            const isTrophy = ach.icon === 'Trophy';
+            const isAward = ach.icon === 'Award';
+            return (
+              <div
+                key={ach.id}
+                className="p-4 sm:p-5 bg-black/80 border border-white/10 hover:border-[#00D9FF]/40 transition-all duration-300 corner-crosshair flex flex-col justify-between space-y-3"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="px-2 py-0.5 text-[10px] font-mono uppercase bg-amber-400/10 border border-amber-400/30 text-amber-300 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                      {ach.badge}
+                    </span>
+                    {ach.date && (
+                      <span className="text-[10px] font-mono text-slate-500">
+                        {ach.date}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 bg-slate-950 border border-white/10 shrink-0 text-[#00D9FF]">
+                      {isTrophy ? (
+                        <Trophy className="w-4 h-4 text-amber-400" />
+                      ) : isAward ? (
+                        <Award className="w-4 h-4 text-[#00D9FF]" />
+                      ) : (
+                        <Sparkles className="w-4 h-4 text-emerald-400" />
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="text-sm sm:text-base font-space font-medium text-white tracking-wide uppercase leading-snug">
+                        {ach.title}
+                      </h4>
+                      <div className="text-[11px] font-mono text-[#8BE9FD] mt-0.5">
+                        {ach.issuer}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-slate-400 font-light leading-relaxed">
+                    {ach.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

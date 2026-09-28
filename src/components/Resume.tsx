@@ -140,7 +140,7 @@ export const Resume: React.FC = () => {
             <div className="space-y-0.5 text-xs">
               <span className="font-space font-medium text-white block">Experience & Honors</span>
               <span className="text-slate-400 font-light text-[11px] leading-relaxed">
-                SDE Intern at Chitralai • Quasar Hackathon Finalist • IBM Certified
+                SDE Intern at Chitralai • Top 7 MUSA Codex • Quasar Finalist • IBM Certified
               </span>
             </div>
           </div>

@@ -136,11 +136,11 @@ export const FEATURED_PROJECTS: Project[] = [
     id: "swastyasetu",
     title: "SwasthyaSetu | Rural Healthcare Continuity & Referral Layer",
     subtitle: "Offline-First Distributed Sync, Hugging Face TrOCR & 2G GSM Fallback",
-    description: "A mission-critical offline-first healthcare continuity platform connecting rural Primary Health Centres (PHCs) and district hospitals. Guarantees zero referral loss during broadband blackouts through Dexie.js (IndexedDB) local queueing, idempotent auto-sync to PostgreSQL/Prisma backends, Hugging Face TrOCR prescription extraction, and ≤160-char 2G SMS emergency fallback.",
+    description: "A mission-critical offline-first healthcare continuity platform engineered for the MUSA Codex Hackathon (Top 7 Finalist), connecting rural Primary Health Centres (PHCs) and district hospitals. Guarantees zero referral loss during broadband blackouts through Dexie.js (IndexedDB) local queueing, idempotent auto-sync to PostgreSQL/Prisma backends, Hugging Face TrOCR prescription extraction, and ≤160-char 2G SMS emergency fallback.",
     category: "Full Stack & AI",
     featured: true,
-    badge: "HACKATHON INNOVATION",
-    collaborators: "Team Project with Aniket Vishwakarma",
+    badge: "TOP 7 FINALIST • MUSA CODEX",
+    collaborators: "Team Project with Aniket Vishwakarma (MUSA Codex Hackathon)",
     technologies: [
       "React 19", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM", 
       "Dexie.js (IndexedDB)", "Hugging Face TrOCR", "Tailwind CSS", "JWT RBAC", "RESTful APIs", "GSM SMS Engine"
@@ -154,6 +154,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { label: "Care Roles", value: "4 Multi-Tenant" }
     ],
     highlights: [
+      "MUSA Codex Hackathon Top 7 Finalist: Awarded Top 7 finish among competing engineering teams for architecting a resilient offline triage and referral data pipeline that operates reliably during zero-broadband rural blackouts.",
       "Offline-First Dexie.js Persistence: Engineered client-side IndexedDB caching via Dexie.js, guaranteeing zero data loss for patient vitals, emergency STEMI referrals, and clinical notes during rural broadband outages.",
       "Server-Side Deduplication & Auto-Sync: Architected an idempotent background sync protocol (event_id hashing) reconciling local device records into PostgreSQL via Prisma ORM as soon as network connectivity is restored.",
       "Hugging Face TrOCR Vision Pipeline: Integrated TrOCR transformer model for transcribing handwritten medical prescriptions and discharge summaries with human-in-the-loop split-screen clinician review.",
@@ -419,6 +420,15 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const ACHIEVEMENTS: Achievement[] = [
   {
+    id: "musa-codex",
+    title: "MUSA Codex Hackathon — Top 7 Finalist",
+    issuer: "MUSA Codex Hackathon",
+    description: "Secured Top 7 Finalist standing among competing teams with SwasthyaSetu — an offline-first rural healthcare triage and continuity platform featuring Dexie.js auto-sync, Hugging Face TrOCR AI transcription, and 2G GSM emergency fallback.",
+    badge: "Top 7 Finalist",
+    icon: "Trophy",
+    date: "2026"
+  },
+  {
     id: "quasar",
     title: "Quasar 4.0 Hackathon Finalist",
     issuer: "Quasar Tech Innovation",
@@ -521,7 +531,7 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "1. [CityOS] BMC Smart Civic Operating System",
       "   - YOLOv8 (91.4% mAP50), PM2 500+ req/s, 2dsphere GIS deduplication, React 19 PWA",
       "   - Demo: https://smart-civic-pi.vercel.app",
-      "2. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (Hackathon Project)",
+      "2. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (MUSA Codex Hackathon — Top 7 Finalist)",
       "   - Dexie.js IndexedDB, 0% data loss sync, Hugging Face TrOCR, PostgreSQL & Prisma, 2G SMS Fallback",
       "   - Team: Nikhil Thange & Aniket Vishwakarma",
       "   - Demo: https://swastyasetu-three.vercel.app | Repo: https://github.com/aniketvishwakarma-11/Swastyasetu",
@@ -552,8 +562,8 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
   "swastyasetu": {
     title: "SwasthyaSetu — Offline-First Rural Healthcare Continuity Layer",
     output: [
-      "Role: Full Stack & Systems Architecture (Hackathon Project)",
-      "Team: Nikhil Thange & Aniket Vishwakarma",
+      "Hackathon: MUSA Codex Hackathon (Top 7 Finalist Standing)",
+      "Role: Full Stack & Systems Architecture (Team Project with Aniket Vishwakarma)",
       "Core Innovation: 100% offline-first referral survival with Dexie.js (IndexedDB) & auto-reconnect sync",
       "AI Pipeline: Hugging Face TrOCR vision transformer transcribes cursive handwritten medical prescriptions",
       "Emergency Fallback: ≤160-character compressed GSM SMS transport payload for zero-connectivity zones",
