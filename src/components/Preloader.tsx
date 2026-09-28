@@ -121,16 +121,22 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Instant Skip Button for Recruiters */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          dismissPreloader();
-        }}
-        className="absolute bottom-6 right-6 px-3 py-1.5 bg-black/80 border border-[#00D9FF]/40 text-[#00D9FF] hover:bg-[#00D9FF] hover:text-black transition-all text-[10px] sm:text-xs font-mono uppercase tracking-wider flex items-center gap-1.5"
-      >
-        <span>[ SKIP (ESC) ]</span>
-      </button>
+      {/* Instant Skip & Enter Cue for Recruiters */}
+      <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
+        <span className="text-[10px] font-mono text-slate-400 hidden sm:inline">
+          [ Click anywhere or press ESC to enter immediately ]
+        </span>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            dismissPreloader();
+          }}
+          className="pointer-events-auto ml-auto px-3.5 py-1.5 bg-black/90 border border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-black transition-all text-[11px] font-mono uppercase tracking-wider flex items-center gap-1.5 shadow-[0_0_15px_rgba(0,217,255,0.3)]"
+          aria-label="Skip cinematic preloader and enter portfolio"
+        >
+          <span>[ ENTER PORTFOLIO (ESC) &rarr; ]</span>
+        </button>
+      </div>
     </div>
   );
 };

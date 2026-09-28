@@ -11,7 +11,8 @@ import {
   Menu, 
   X, 
   MapPin, 
-  Clock
+  Clock,
+  Download
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
@@ -162,7 +163,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenTerminal }) => {
 
           {/* Navigation Links */}
           <nav className="space-y-1 font-space text-xs">
-            <div className="text-[10px] font-mono text-slate-500 tracking-widest uppercase px-3 pb-1">
+            <div className="text-[10px] font-mono text-slate-400 tracking-widest uppercase px-3 pb-1">
               // INDEX_NAV
             </div>
             {navItems.map((item) => {
@@ -177,7 +178,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenTerminal }) => {
                       : 'text-slate-400 hover:text-white hover:bg-white/5 border-transparent'
                   }`}
                 >
-                  <span className={`${isActive ? 'text-[#00D9FF]' : 'text-slate-500'}`}>
+                  <span className={`${isActive ? 'text-[#00D9FF]' : 'text-slate-400'}`}>
                     {item.icon}
                   </span>
                   <span>{item.label}</span>
@@ -204,6 +205,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenTerminal }) => {
               <span>STATUS: READY_TO_DEPLOY</span>
             </div>
           </div>
+
+          {/* Quick 1-Click Resume Download for Recruiters */}
+          <a
+            href={PERSONAL_INFO.resumeUrl}
+            download={PERSONAL_INFO.resumeFileName}
+            className="w-full btn-cyber-primary py-2 text-[11px] flex items-center justify-center gap-2 shadow-[0_0_12px_rgba(0,217,255,0.25)]"
+            title="Download ATS-compatible PDF resume file"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>[ DOWNLOAD RESUME ]</span>
+          </a>
 
           {/* CLI Launcher Button */}
           <button

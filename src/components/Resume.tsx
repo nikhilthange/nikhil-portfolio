@@ -102,13 +102,13 @@ export const Resume: React.FC = () => {
           {/* Telemetry / File Specs Badges */}
           <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-300">
             <div className="px-2.5 py-1 bg-black/60 border border-white/10">
-              <span className="text-slate-500">FORMAT:</span> <span className="text-white">PDF Document</span>
+              <span className="text-slate-400">FORMAT:</span> <span className="text-white">PDF Document</span>
             </div>
             <div className="px-2.5 py-1 bg-black/60 border border-white/10">
-              <span className="text-slate-500">SIZE:</span> <span className="text-[#00D9FF]">~200 KB</span>
+              <span className="text-slate-400">SIZE:</span> <span className="text-[#00D9FF]">~200 KB</span>
             </div>
             <div className="px-2.5 py-1 bg-black/60 border border-white/10">
-              <span className="text-slate-500">YEAR:</span> <span className="text-emerald-400">2026 Updated</span>
+              <span className="text-slate-400">YEAR:</span> <span className="text-emerald-400">2026 Updated</span>
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export const Resume: React.FC = () => {
           <div className="p-3 bg-black/50 border border-white/10 flex items-start gap-3">
             <Layers className="w-4 h-4 text-[#00D9FF] shrink-0 mt-0.5" />
             <div className="space-y-0.5 text-xs">
-              <span className="font-space font-medium text-white block">Full Stack Stack</span>
+              <span className="font-space font-medium text-white block">Full Stack Engineering</span>
               <span className="text-slate-400 font-light text-[11px] leading-relaxed">
                 React 19, TypeScript, Node.js, Express, PostgreSQL, MongoDB, Redis
               </span>
@@ -153,7 +153,7 @@ export const Resume: React.FC = () => {
               Official Document Access Protocol
             </div>
             <div className="text-[11px] text-slate-400 font-mono mt-0.5">
-              Target File: <span className="text-[#00D9FF]">/public/thangenikhil.pdf</span>
+              Verified Dossier: <span className="text-[#00D9FF]">{downloadFileName}</span>
             </div>
           </div>
 
@@ -210,7 +210,7 @@ export const Resume: React.FC = () => {
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#00D9FF] animate-ping" />
                 <span className="text-[#00D9FF] font-semibold">LIVE_PDF_STREAM</span>
-                <span className="hidden sm:inline text-slate-500">| thangenikhil.pdf</span>
+                <span className="hidden sm:inline text-slate-400">| {downloadFileName} (ATS-Optimized)</span>
               </div>
 
               <div className="flex items-center gap-3">

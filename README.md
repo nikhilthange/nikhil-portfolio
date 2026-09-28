@@ -27,14 +27,15 @@ This repository hosts the official engineering portfolio of **Nikhil Ankush Than
 
 ## 🛠️ Featured Engineering Projects Documented
 
-| System | Domain | Core Stack | Key Metric |
-| :--- | :--- | :--- | :--- |
-| **CityOS** | Civic Tech & CV | React 19, YOLOv8, PyTorch, Node.js, Redis, MongoDB 2dsphere | 91.4% mAP50 • 500+ req/s P95 |
-| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), TrOCR, Prisma, GSM SMS | **Top 7 Finalist (MUSA Codex)** • 100% Offline Survival |
-| **SpeakLingo** | Real-Time WebRTC | React 19, WebRTC, Socket.IO, Web Speech API, Google STUN | &lt;120ms P2P Latency • 60fps Stream |
-| **Smart Expense** | FinTech Telemetry | React 18, TypeScript, Tesseract.js OCR, NVIDIA NIM, Redis, Docker | sub-30ms Redis • 70% Chunk Reduction |
-| **WhatsApp Extractor** | Headless Automation | Node.js, Puppeteer, whatsapp-web.js, Socket.IO, ExcelJS | &le;256MB RAM Cap • 10k+ Contact Crawls |
-| **Interview AI** | LLM Streaming | React 19, NVIDIA NIM LLMs, WebSockets, Multi-Tenant RBAC | &lt;300ms Token Stream • 88% ATS Match |
+| System | Domain | Core Stack | Key Metric | Live / Repo |
+| :--- | :--- | :--- | :--- | :--- |
+| **CityOS** | Civic Tech & CV | React 19, YOLOv8, PyTorch, Node.js, Redis, MongoDB 2dsphere | 91.4% mAP50 • 500+ req/s P95 | [Live](https://smart-civic-pi.vercel.app) • [Repo](https://github.com/nikhilthange/smart-civic) |
+| **HireMate** | Recruitment AI | React 19, NVIDIA NIM LLMs, WebSockets, Multi-Tenant RBAC | &lt;300ms Token Stream • 88% ATS Match | [Live](https://hiremate-portal.vercel.app) • [Repo](https://github.com/nikhilthange/ai-powered-interview-hiring-platform) |
+| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), TrOCR, Prisma, GSM SMS | **Top 7 Finalist (MUSA Codex)** • 100% Offline Survival | [Live](https://swastyasetu-three.vercel.app) • [Repo](https://github.com/aniketvishwakarma-11/Swastyasetu) |
+| **CricNova AI** | Sports Analytics | TypeScript, React 19, REST APIs, ML Models, Vite | Real-Time Telemetry • Predictive Win Curve | [Live](https://cricnova-ai.vercel.app) • [Repo](https://github.com/nikhilthange/cricnova-ai) |
+| **SpeakLingo** | Real-Time WebRTC | React 19, WebRTC, Socket.IO, Web Speech API, Google STUN | &lt;120ms P2P Latency • 60fps Stream | [Repo](https://github.com/nikhilthange/speaklingo) |
+| **WhatsApp Extractor** | Headless Automation | Node.js, Puppeteer, whatsapp-web.js, Socket.IO, ExcelJS | &le;256MB RAM Cap • 10k+ Contact Crawls | [Repo](https://github.com/nikhilthange/whatsapp-group-extractor) |
+| **Smart Expense** | FinTech Telemetry | React 18, TypeScript, Tesseract.js OCR, NVIDIA NIM, Redis | sub-30ms Redis • Case Study | Architecture Case Study |
 
 ---
 
@@ -91,7 +92,8 @@ npm run preview
 ## 📬 Contact & Channel Verification
 
 - **Email:** [nikhilthange75@gmail.com](mailto:nikhilthange75@gmail.com)
-- **LinkedIn:** [linkedin.com/in/nikhil-thange](https://linkedin.com/in/nikhil-thange)
+- **LinkedIn:** [linkedin.com/in/nikhil-thange-001bb52b5](https://www.linkedin.com/in/nikhil-thange-001bb52b5)
+- **WhatsApp:** [+91 9820078156](https://wa.me/919820078156)
 - **GitHub:** [github.com/nikhilthange](https://github.com/nikhilthange)
 - **Location:** Mumbai, MH, India (UTC+5:30 IST)
 

@@ -43,7 +43,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 {PERSONAL_INFO.name} — OFFICIAL DOSSIER
               </span>
               <span className="text-[10px] font-mono text-[#8BE9FD]">
-                /public/thangenikhil.pdf
+                {downloadFileName} • ATS-Compatible PDF
               </span>
             </div>
           </div>

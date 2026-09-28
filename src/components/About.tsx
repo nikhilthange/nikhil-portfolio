@@ -75,7 +75,7 @@ export const About: React.FC = () => {
                     {stat.value} <span className="text-[10px] text-slate-400 uppercase font-normal">{stat.unit}</span>
                   </span>
                 </div>
-                <div className="text-[10px] sm:text-[11px] text-slate-500 font-light mt-1 leading-snug">
+                <div className="text-[10px] sm:text-[11px] text-slate-400 font-light mt-1 leading-snug">
                   {stat.subtext}
                 </div>
               </div>

@@ -210,7 +210,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({ isOpen
 
         {/* Quick Command Chips */}
         <div className="px-4 py-2 bg-[#090e1a] border-b border-white/5 flex flex-wrap items-center gap-1.5 text-[11px]">
-          <span className="text-slate-500">Quick:</span>
+          <span className="text-slate-400">Quick:</span>
           {quickCommands.map((cmd) => (
             <button
               key={cmd}

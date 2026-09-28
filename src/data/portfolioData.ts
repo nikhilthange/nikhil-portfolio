@@ -55,6 +55,8 @@ export interface Education {
   location: string;
   score: string;
   scoreLabel: string;
+  coursework?: string[];
+  highlights?: string[];
 }
 
 export const PERSONAL_INFO = {
@@ -71,19 +73,21 @@ export const PERSONAL_INFO = {
   timezone: "Asia/Kolkata (IST, UTC+5:30)",
   email: "nikhilthange75@gmail.com",
   phone: "+91 9820078156",
-  availability: "Open to SDE Intern & Full-Time Software Engineering Roles (2026–2027)",
+  availability: "Available Immediately for SDE Intern & Full-Time Software Roles (2026–2027)",
   socials: {
-    linkedin: "https://linkedin.com/in/nikhil-thange",
+    linkedin: "https://www.linkedin.com/in/nikhil-thange-001bb52b5",
     github: "https://github.com/nikhilthange",
     smartCivic: "https://smart-civic-pi.vercel.app",
     swasthyaSetu: "https://swastyasetu-three.vercel.app",
+    hireMate: "https://hiremate-portal.vercel.app",
+    cricnova: "https://cricnova-ai.vercel.app",
     speaklingo: "https://github.com/nikhilthange/speaklingo",
-    smartExpense: "https://github.com/nikhilthange/Smart-Expense-Manager",
     waExtractor: "https://github.com/nikhilthange/whatsapp-group-extractor",
+    whatsapp: "https://wa.me/919820078156?text=Hi%20Nikhil%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20engineering%20opportunity.",
     email: "mailto:nikhilthange75@gmail.com",
-    resume: "/thangenikhil.pdf",
+    resume: "/resume.pdf",
   },
-  resumeUrl: "/thangenikhil.pdf",
+  resumeUrl: "/resume.pdf",
   resumeFileName: "Nikhil_Thange_Resume.pdf"
 };
 
@@ -108,7 +112,7 @@ export const FEATURED_PROJECTS: Project[] = [
       "Redis", "MongoDB (2dsphere)", "Docker", "Nginx", "Leaflet GIS", "Turf.js"
     ],
     liveUrl: "https://smart-civic-pi.vercel.app",
-    githubUrl: "https://github.com/nikhilthange",
+    githubUrl: "https://github.com/nikhilthange/smart-civic",
     metrics: [
       { label: "Vision mAP50", value: "91.4%" },
       { label: "P95 Latency", value: "sub-50ms" },
@@ -129,6 +133,42 @@ export const FEATURED_PROJECTS: Project[] = [
         { step: "02", title: "YOLOv8 Inference", desc: "PyTorch/CUDA containerized vision pipeline classifies defect category with 91.4% mAP50 precision.", icon: "Cpu" },
         { step: "03", title: "Geospatial Deduplication", desc: "MongoDB 2dsphere compound index & Turf.js PIP verify ward boundaries and flag duplicate incidents within 35m.", icon: "MapPin" },
         { step: "04", title: "High-Concurrency Dispatch", desc: "PM2 clustered Node microservices cached with Redis TTL route tickets to field engineers in real-time.", icon: "Zap" }
+      ]
+    }
+  },
+  {
+    id: "interview-ai",
+    title: "AI-Powered Interview & Recruitment Intelligence Platform (HireMate)",
+    subtitle: "Real-time LLM Streaming, Structured ATS Matching & Multi-Tenant RBAC",
+    description: "An intelligent technical hiring engine featuring sub-300ms real-time AI interview evaluations with NVIDIA NIM LLMs, automated ATS semantic resume parsing, and multi-tenant enterprise RBAC security.",
+    category: "AI & LLMs",
+    featured: true,
+    badge: "AI STREAMING ARCHITECTURE",
+    technologies: [
+      "React 19", "Node.js", "Express.js", "NVIDIA NIM LLMs", "Socket.IO", 
+      "PostgreSQL", "MongoDB", "JWT", "Tailwind CSS", "WebSockets"
+    ],
+    liveUrl: "https://hiremate-portal.vercel.app",
+    githubUrl: "https://github.com/nikhilthange/ai-powered-interview-hiring-platform",
+    metrics: [
+      { label: "Streaming Latency", value: "<300ms" },
+      { label: "ATS Semantic Match", value: "88%" },
+      { label: "Security Architecture", value: "Multi-tenant RBAC" },
+      { label: "Communication", value: "Socket.IO WebSockets" }
+    ],
+    highlights: [
+      "Low-Latency LLM Streaming: Architected real-time AI mock interview evaluations by streaming NVIDIA NIM LLM token responses over WebSockets (Socket.IO), reducing perceived evaluation latency to <300ms.",
+      "ATS Parser & Scoring Engine: Engineered an automated resume parsing and candidate matching engine with structured prompt validation, improving candidate-job semantic alignment accuracy to 88%.",
+      "Enterprise Security & RBAC: Built multi-tenant role-based access control (Candidate, Recruiter, Admin) with stateless JWT authentication, cryptographic password hashing, and granular route middleware.",
+      "Interactive Candidate Analytics: Responsive React 19 analytics dashboard visualizing speech pace, keyword density, technical accuracy, and code complexity scores."
+    ],
+    architecture: {
+      title: "Real-Time AI Streaming & Evaluation Pipeline",
+      flow: [
+        { step: "01", title: "ATS Ingestion & Parsing", desc: "PDF/DOCX resumes parsed into structured JSON schema and matched against job requirements with 88% accuracy.", icon: "FileText" },
+        { step: "02", title: "Real-Time Interview Room", desc: "Socket.IO bidirectional WebSocket channel streams audio transcripts and technical questions.", icon: "Mic" },
+        { step: "03", title: "NVIDIA NIM LLM Stream", desc: "Sub-300ms token streaming generates contextual follow-up questions and real-time behavioral cues.", icon: "Sparkles" },
+        { step: "04", title: "Multi-Tenant RBAC Audit", desc: "PostgreSQL & MongoDB encrypted persistence with candidate/recruiter/admin role validation.", icon: "ShieldCheck" }
       ]
     }
   },
@@ -172,6 +212,41 @@ export const FEATURED_PROJECTS: Project[] = [
     }
   },
   {
+    id: "cricnova-ai",
+    title: "CricNova AI | Real-Time Cricket Analytics & ML Telemetry Platform",
+    subtitle: "AI Match Predictions, Real-Time Ball-by-Ball Telemetry & Player Analytics",
+    description: "A production AI-powered cricket analytics platform engineered with TypeScript, React, and REST APIs. Features predictive match outcome modeling, live ball-by-ball telemetry, player head-to-head metrics, and automated stats aggregation.",
+    category: "AI & LLMs",
+    featured: true,
+    badge: "LIVE AI SPORTS TELEMETRY",
+    technologies: [
+      "TypeScript", "React 19", "Node.js", "Express.js", "Machine Learning", 
+      "Tailwind CSS", "RESTful APIs", "Vite"
+    ],
+    liveUrl: "https://cricnova-ai.vercel.app",
+    githubUrl: "https://github.com/nikhilthange/cricnova-ai",
+    metrics: [
+      { label: "Deployment", value: "Production" },
+      { label: "Data Pipeline", value: "Real-time" },
+      { label: "Frontend", value: "React 19 / TS" },
+      { label: "Architecture", value: "Full Stack" }
+    ],
+    highlights: [
+      "Real-Time Match Analytics: Engineered an interactive analytics telemetry engine providing ball-by-ball match metrics, player scorecards, and live team standings.",
+      "Predictive Match Modeling: Implemented data-driven predictive algorithms evaluating match conditions, team momentum, and individual player performance indicators.",
+      "Responsive Modern UI: Built a streamlined TypeScript/React interface with responsive dark mode and instant state updates."
+    ],
+    architecture: {
+      title: "CricNova AI Telemetry & Match Prediction Architecture",
+      flow: [
+        { step: "01", title: "Live Ingestion & Stats Parser", desc: "Aggregates real-time match events and team records into normalized JSON entities.", icon: "Activity" },
+        { step: "02", title: "Predictive Model Inference", desc: "Evaluates historical team metrics and match state to project win probability curves.", icon: "Sparkles" },
+        { step: "03", title: "Client Telemetry Streaming", desc: "React 19 frontend updates match telemetry dashboards with sub-second responsive views.", icon: "Zap" },
+        { step: "04", title: "Player Head-to-Head HUD", desc: "Interactive comparative visualizations highlighting batting/bowling efficiency.", icon: "Cpu" }
+      ]
+    }
+  },
+  {
     id: "speaklingo",
     title: "SpeakLingo | Real-Time WebRTC Language Studio & AI Coach",
     subtitle: "Low-Latency Peer Matchmaking, AI Speech Synthesis & Live IELTS Telemetry",
@@ -204,42 +279,6 @@ export const FEATURED_PROJECTS: Project[] = [
         { step: "02", title: "P2P WebRTC Media Pipe", desc: "Direct peer-to-peer encrypted media stream established for 720p 60fps video and adaptive audio with loopback calibration.", icon: "Activity" },
         { step: "03", title: "Web Speech & Real-Time Subtitles", desc: "In-browser Web Speech API captures audio frames, rendering live bidirectional subtitles with zero cloud latency.", icon: "Mic" },
         { step: "04", title: "AI Coaching & IELTS Telemetry", desc: "Grammar evaluation engine analyzes speech patterns, offering Band 8+ vocabulary alternatives and spaced repetition flashcards.", icon: "Sparkles" }
-      ]
-    }
-  },
-  {
-    id: "smart-expense",
-    title: "Smart Expense Manager | FinTech Capital Telemetry Platform",
-    subtitle: "High-Precision Personal Capital Telemetry, AI Forecasting & Tesseract OCR Pipeline",
-    description: "A high-precision personal capital telemetry and FinTech platform benchmarked against modern enterprise banking architectures (CRED, Mercury, Apple Wallet). Features real-time multi-account balance synchronization (UPI, Cards, Banks), Tesseract.js receipt OCR extraction, NVIDIA NIM AI cash runway projections, Redis caching, and automated MongoDB aggregation pipelines.",
-    category: "Full Stack & AI",
-    featured: true,
-    badge: "FINTECH CAPITAL TELEMETRY",
-    technologies: [
-      "React 18", "TypeScript", "Node.js", "Express.js", "MongoDB Atlas", "Redis", 
-      "Tesseract.js OCR", "NVIDIA NIM AI", "Docker Compose", "Tailwind CSS", "Playwright E2E", "Jest"
-    ],
-    githubUrl: "https://github.com/nikhilthange/Smart-Expense-Manager",
-    metrics: [
-      { label: "Bundle Payload", value: "-70% Chunk" },
-      { label: "Design Standard", value: "9.7 / 10" },
-      { label: "Redis Latency", value: "sub-30ms" },
-      { label: "PWA Readiness", value: "100% Offline" }
-    ],
-    highlights: [
-      "FinTech Capital Telemetry Engine: Engineered multi-account balance synchronization (UPI, Cards, Bank Accounts) with MongoDB aggregation pipelines computing Month-over-Month category shift deltas and savings velocity.",
-      "Tesseract.js Receipt OCR Extraction: Automated paper receipt and invoice digestion via client-side/server-side Tesseract.js OCR pipeline, auto-populating merchant, tax, and itemized spend categories.",
-      "AI Financial Intelligence & Cash Runway: Integrated NVIDIA NIM AI advisory models generating personalized cash runway projections, risk matrix evaluations, and anomaly spend detection.",
-      "Zero-Leak Security Architecture: Implemented stateless short-lived 15-minute JWT access tokens paired with rotating HttpOnly refresh cookies, multi-tenant RBAC, and encrypted MongoDB audit logs.",
-      "Production DevOps & Testing: Configured multi-stage Docker Compose orchestrations, Playwright E2E testing suites, and Jest unit test coverage integrated into GitHub Actions CI/CD."
-    ],
-    architecture: {
-      title: "Smart Expense Manager Edge-to-Cloud FinTech Architecture",
-      flow: [
-        { step: "01", title: "Receipt Ingestion & Tesseract OCR", desc: "Frontline receipt camera upload is processed via Tesseract.js OCR, extracting merchant, amount, and timestamp.", icon: "Camera" },
-        { step: "02", title: "Stateless Auth & RBAC Guard", desc: "Express middleware validates short-lived JWTs and rotates HttpOnly refresh cookies across user and admin roles.", icon: "ShieldCheck" },
-        { step: "03", title: "Aggregations & Redis Caching", desc: "MongoDB aggregation pipelines calculate category shift deltas, cached in Redis TTL keys for sub-30ms P95 queries.", icon: "Database" },
-        { step: "04", title: "AI Cash Runway Telemetry", desc: "NVIDIA NIM / AI analytics engine evaluates 30-day cash runway, anomaly spending spikes, and automated budget alerts.", icon: "Sparkles" }
       ]
     }
   },
@@ -280,37 +319,37 @@ export const FEATURED_PROJECTS: Project[] = [
     }
   },
   {
-    id: "interview-ai",
-    title: "AI-Powered Interview & Recruitment Intelligence Platform",
-    subtitle: "Real-time LLM Streaming, Structured ATS Matching & Multi-Tenant RBAC",
-    description: "An intelligent technical hiring engine featuring sub-300ms real-time AI interview evaluations with NVIDIA NIM LLMs, automated ATS semantic resume parsing, and multi-tenant enterprise RBAC security.",
-    category: "AI & LLMs",
-    featured: true,
-    badge: "AI STREAMING ARCHITECTURE",
+    id: "smart-expense",
+    title: "Smart Expense Manager | FinTech Capital Telemetry Platform",
+    subtitle: "High-Precision Personal Capital Telemetry, AI Forecasting & Tesseract OCR Pipeline",
+    description: "A high-precision personal capital telemetry and FinTech platform benchmarked against modern enterprise banking architectures (CRED, Mercury, Apple Wallet). Features real-time multi-account balance synchronization (UPI, Cards, Banks), Tesseract.js receipt OCR extraction, NVIDIA NIM AI cash runway projections, Redis caching, and automated MongoDB aggregation pipelines.",
+    category: "Full Stack & AI",
+    featured: false,
+    badge: "FINTECH CAPITAL TELEMETRY • CASE STUDY",
     technologies: [
-      "React 19", "Node.js", "Express.js", "NVIDIA NIM LLMs", "Socket.IO", 
-      "PostgreSQL", "MongoDB", "JWT", "Tailwind CSS", "WebSockets"
+      "React 18", "TypeScript", "Node.js", "Express.js", "MongoDB Atlas", "Redis", 
+      "Tesseract.js OCR", "NVIDIA NIM AI", "Docker Compose", "Tailwind CSS", "Playwright E2E", "Jest"
     ],
-    githubUrl: "https://github.com/nikhilthange",
     metrics: [
-      { label: "Streaming Latency", value: "<300ms" },
-      { label: "ATS Semantic Match", value: "88%" },
-      { label: "Security Architecture", value: "Multi-tenant RBAC" },
-      { label: "Communication", value: "Socket.IO WebSockets" }
+      { label: "Bundle Payload", value: "-70% Chunk" },
+      { label: "Design Standard", value: "9.7 / 10" },
+      { label: "Redis Latency", value: "sub-30ms" },
+      { label: "PWA Readiness", value: "100% Offline" }
     ],
     highlights: [
-      "Low-Latency LLM Streaming: Architected real-time AI mock interview evaluations by streaming NVIDIA NIM LLM token responses over WebSockets (Socket.IO), reducing perceived evaluation latency to <300ms.",
-      "ATS Parser & Scoring Engine: Engineered an automated resume parsing and candidate matching engine with structured prompt validation, improving candidate-job semantic alignment accuracy to 88%.",
-      "Enterprise Security & RBAC: Built multi-tenant role-based access control (Candidate, Recruiter, Admin) with stateless JWT authentication, cryptographic password hashing, and granular route middleware.",
-      "Interactive Candidate Analytics: Responsive React 19 analytics dashboard visualizing speech pace, keyword density, technical accuracy, and code complexity scores."
+      "FinTech Capital Telemetry Engine: Engineered multi-account balance synchronization (UPI, Cards, Bank Accounts) with MongoDB aggregation pipelines computing Month-over-Month category shift deltas and savings velocity.",
+      "Tesseract.js Receipt OCR Extraction: Automated paper receipt and invoice digestion via client-side/server-side Tesseract.js OCR pipeline, auto-populating merchant, tax, and itemized spend categories.",
+      "AI Financial Intelligence & Cash Runway: Integrated NVIDIA NIM AI advisory models generating personalized cash runway projections, risk matrix evaluations, and anomaly spend detection.",
+      "Zero-Leak Security Architecture: Implemented stateless short-lived 15-minute JWT access tokens paired with rotating HttpOnly refresh cookies, multi-tenant RBAC, and encrypted MongoDB audit logs.",
+      "Production DevOps & Testing: Configured multi-stage Docker Compose orchestrations, Playwright E2E testing suites, and Jest unit test coverage integrated into GitHub Actions CI/CD."
     ],
     architecture: {
-      title: "Real-Time AI Streaming & Evaluation Pipeline",
+      title: "Smart Expense Manager Edge-to-Cloud FinTech Architecture",
       flow: [
-        { step: "01", title: "ATS Ingestion & Parsing", desc: "PDF/DOCX resumes parsed into structured JSON schema and matched against job requirements with 88% accuracy.", icon: "FileText" },
-        { step: "02", title: "Real-Time Interview Room", desc: "Socket.IO bidirectional WebSocket channel streams audio transcripts and technical questions.", icon: "Mic" },
-        { step: "03", title: "NVIDIA NIM LLM Stream", desc: "Sub-300ms token streaming generates contextual follow-up questions and real-time behavioral cues.", icon: "Sparkles" },
-        { step: "04", title: "Multi-Tenant RBAC Audit", desc: "PostgreSQL & MongoDB encrypted persistence with candidate/recruiter/admin role validation.", icon: "ShieldCheck" }
+        { step: "01", title: "Receipt Ingestion & Tesseract OCR", desc: "Frontline receipt camera upload is processed via Tesseract.js OCR, extracting merchant, amount, and timestamp.", icon: "Camera" },
+        { step: "02", title: "Stateless Auth & RBAC Guard", desc: "Express middleware validates short-lived JWTs and rotates HttpOnly refresh cookies across user and admin roles.", icon: "ShieldCheck" },
+        { step: "03", title: "Aggregations & Redis Caching", desc: "MongoDB aggregation pipelines calculate category shift deltas, cached in Redis TTL keys for sub-30ms P95 queries.", icon: "Database" },
+        { step: "04", title: "AI Cash Runway Telemetry", desc: "NVIDIA NIM / AI analytics engine evaluates 30-day cash runway, anomaly spending spikes, and automated budget alerts.", icon: "Sparkles" }
       ]
     }
   }
@@ -465,7 +504,19 @@ export const EDUCATION_LIST: Education[] = [
     period: "Aug 2023 – Jun 2027 (Expected)",
     location: "Mumbai, Maharashtra",
     score: "7.50 / 10.0",
-    scoreLabel: "CGPA"
+    scoreLabel: "CGPA",
+    coursework: [
+      "Data Structures & Algorithms",
+      "Database Management Systems (DBMS)",
+      "Operating Systems",
+      "Computer Networks",
+      "Object-Oriented Programming (OOP)",
+      "System Design & Cloud Basics"
+    ],
+    highlights: [
+      "Top 7 Finalist at MUSA Codex National Hackathon",
+      "Quasar 4.0 Hackathon Finalist & Top Innovator"
+    ]
   },
   {
     degree: "Higher Secondary Certificate (HSC) – Science",
@@ -473,7 +524,8 @@ export const EDUCATION_LIST: Education[] = [
     period: "Jun 2021 – May 2023",
     location: "Mumbai, Maharashtra",
     score: "61.0%",
-    scoreLabel: "Percentage"
+    scoreLabel: "Percentage",
+    coursework: ["Physics", "Chemistry", "Mathematics", "Computer Science"]
   },
   {
     degree: "Secondary School Certificate (SSC)",
@@ -481,7 +533,8 @@ export const EDUCATION_LIST: Education[] = [
     period: "Jun 2020 – Mar 2021",
     location: "Mumbai, Maharashtra",
     score: "87.0%",
-    scoreLabel: "Percentage"
+    scoreLabel: "Percentage",
+    coursework: ["Mathematics", "Science & Technology", "English", "Social Sciences"]
   }
 ];
 
@@ -493,6 +546,8 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "  skills       - List core technical competencies by stack",
       "  projects     - View featured production & hackathon projects",
       "  swastyasetu  - Deep-dive into SwasthyaSetu healthcare architecture",
+      "  hiremate     - Inspect HireMate AI recruitment platform",
+      "  cricnova     - Inspect CricNova AI sports analytics platform",
       "  speaklingo   - Inspect SpeakLingo WebRTC & AI language platform",
       "  expense      - Inspect Smart Expense Manager FinTech architecture",
       "  extractor    - Inspect WhatsApp contact extractor automation engine",
@@ -512,7 +567,8 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "Specialization: High-Concurrency Microservices | React 19/TS | AI & Computer Vision",
       "Location: Mumbai, MH, India",
       "Key Achievement: Engineered backends sustaining 500+ req/s at sub-50ms P95 latency",
-      "Current: SDE Intern at Chitralai"
+      "Current: SDE Intern at Chitralai",
+      "Education: B.E. in Information Technology (Mumbai University, 2023-2027)"
     ]
   },
   "skills": {
@@ -530,22 +586,45 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     output: [
       "1. [CityOS] BMC Smart Civic Operating System",
       "   - YOLOv8 (91.4% mAP50), PM2 500+ req/s, 2dsphere GIS deduplication, React 19 PWA",
-      "   - Demo: https://smart-civic-pi.vercel.app",
-      "2. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (MUSA Codex Hackathon — Top 7 Finalist)",
+      "   - Demo: https://smart-civic-pi.vercel.app | Repo: https://github.com/nikhilthange/smart-civic",
+      "2. [HireMate / Interview AI] AI-Powered Recruitment Intelligence Platform",
+      "   - NVIDIA NIM LLMs streaming (<300ms), 88% ATS match accuracy, Multi-tenant RBAC",
+      "   - Demo: https://hiremate-portal.vercel.app | Repo: https://github.com/nikhilthange/ai-powered-interview-hiring-platform",
+      "3. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (MUSA Codex Hackathon — Top 7 Finalist)",
       "   - Dexie.js IndexedDB, 0% data loss sync, Hugging Face TrOCR, PostgreSQL & Prisma, 2G SMS Fallback",
       "   - Team: Nikhil Thange & Aniket Vishwakarma",
       "   - Demo: https://swastyasetu-three.vercel.app | Repo: https://github.com/aniketvishwakarma-11/Swastyasetu",
-      "3. [Smart Expense] FinTech Capital Telemetry Platform",
-      "   - Tesseract.js OCR, NVIDIA NIM cash runway, MongoDB aggregations, sub-30ms Redis",
-      "   - Repo: https://github.com/nikhilthange/Smart-Expense-Manager",
-      "4. [SpeakLingo] Real-Time WebRTC Language Studio & AI Coach",
+      "4. [CricNova AI] Real-Time Cricket Analytics & ML Telemetry Platform",
+      "   - Predictive match modeling, live ball-by-ball telemetry, player head-to-head metrics",
+      "   - Demo: https://cricnova-ai.vercel.app | Repo: https://github.com/nikhilthange/cricnova-ai",
+      "5. [SpeakLingo] Real-Time WebRTC Language Studio & AI Coach",
       "   - WebRTC P2P (<120ms), CEFR Radar Matchmaking, Live IELTS HUD, AI Speech Synthesis",
       "   - Repo: https://github.com/nikhilthange/speaklingo",
-      "5. [WhatsApp Extractor] Headless Puppeteer Automation & Contact Ledger",
+      "6. [WhatsApp Extractor] Headless Puppeteer Automation & Contact Ledger",
       "   - whatsapp-web.js, Socket.IO live stream, Excel / CSV / vCard, <=256MB memory cap",
       "   - Repo: https://github.com/nikhilthange/whatsapp-group-extractor",
-      "6. [Interview AI] AI-Powered Recruitment Intelligence Platform",
-      "   - NVIDIA NIM LLMs streaming (<300ms), 88% ATS match accuracy, Multi-tenant RBAC"
+      "7. [Smart Expense] FinTech Capital Telemetry Platform (Case Study)",
+      "   - Tesseract.js OCR, NVIDIA NIM cash runway, MongoDB aggregations, sub-30ms Redis"
+    ]
+  },
+  "hiremate": {
+    title: "HireMate | AI Interview & Recruitment Platform",
+    output: [
+      "Role: Full Stack Architect & AI Engineer",
+      "Live Demo: https://hiremate-portal.vercel.app",
+      "GitHub Repo: https://github.com/nikhilthange/ai-powered-interview-hiring-platform",
+      "Tech: React 19, NVIDIA NIM LLMs, Socket.IO WebSockets, Node.js, Express, PostgreSQL, JWT",
+      "Highlights: Sub-300ms real-time token streaming, 88% ATS semantic matching, multi-tenant RBAC"
+    ]
+  },
+  "cricnova": {
+    title: "CricNova AI | Real-Time Cricket Telemetry & ML Predictions",
+    output: [
+      "Role: Creator & Lead Full Stack Developer",
+      "Live Demo: https://cricnova-ai.vercel.app",
+      "GitHub Repo: https://github.com/nikhilthange/cricnova-ai",
+      "Tech: TypeScript, React 19, Node.js, RESTful APIs, Vite, Tailwind CSS",
+      "Highlights: Real-time ball-by-ball analytics, predictive win models, head-to-head stats HUD"
     ]
   },
   "extractor": {
@@ -576,7 +655,6 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     title: "Smart Expense Manager — FinTech Capital Telemetry Platform",
     output: [
       "Role: Creator & Lead Full Stack FinTech Developer",
-      "Repository: https://github.com/nikhilthange/Smart-Expense-Manager",
       "Benchmark: Engineered to enterprise consumer FinTech UX standards (CRED & Mercury inspired UX)",
       "Core Engines: Multi-account ledgering, Tesseract.js receipt OCR, and MongoDB aggregations",
       "AI & Projections: NVIDIA NIM AI cash runway forecasting and anomaly spend detection",
@@ -617,44 +695,48 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     ]
   },
   "education": {
-    title: "Academic Background",
+    title: "Academic Background & Coursework",
     output: [
       "• B.E. in Information Technology — Vasantdada Patil Pratishthan's College of Engineering (Mumbai University)",
       "  CGPA: 7.50 / 10.0 | Aug 2023 – Jun 2027 (Expected)",
-      "• HSC Science — Ramniranjan Jhunjhunwala College (61.0%)",
-      "• SSC — Saraswati Vidya Niketan (87.0%)"
+      "  Core Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, OOP, System Design",
+      "• HSC Science — Ramniranjan Jhunjhunwala College (61.0%) | Jun 2021 – May 2023",
+      "• SSC — Saraswati Vidya Niketan (87.0%) | Jun 2020 – Mar 2021"
     ]
   },
   "resume": {
     title: "Official Resume Document (PDF)",
     output: [
-      "• File: thangenikhil.pdf (ATS-Optimized Engineering Resume)",
-      "• View in Browser: /thangenikhil.pdf",
-      "• Direct Download: /thangenikhil.pdf",
-      "• Candidate: Nikhil Ankush Thange (Full Stack & AI Engineer)"
+      "• File: Nikhil_Thange_Resume.pdf (ATS-Optimized Engineering Resume)",
+      "• Primary Canonical URL: /resume.pdf",
+      "• Alternate Mirror: /thangenikhil.pdf",
+      "• Direct Download: /resume.pdf",
+      "• Candidate: Nikhil Ankush Thange (Full Stack & AI Systems Engineer)"
     ]
   },
   "contact": {
-    title: "Direct Channels",
+    title: "Direct Channels & Verified Handles",
     output: [
       "• Email: nikhilthange75@gmail.com",
-      "• Phone: (+91) 9820078156",
-      "• LinkedIn: https://linkedin.com/in/nikhil-thange",
+      "• Phone / Voice: (+91) 9820078156",
+      "• WhatsApp: https://wa.me/919820078156",
+      "• LinkedIn: https://www.linkedin.com/in/nikhil-thange-001bb52b5",
       "• GitHub: https://github.com/nikhilthange",
-      "• Smart Expense: https://github.com/nikhilthange/Smart-Expense-Manager",
-      "• SpeakLingo: https://github.com/nikhilthange/speaklingo",
-      "• WhatsApp Extractor: https://github.com/nikhilthange/whatsapp-group-extractor",
+      "• Smart Civic CityOS: https://smart-civic-pi.vercel.app",
+      "• HireMate Interview AI: https://hiremate-portal.vercel.app",
+      "• CricNova AI: https://cricnova-ai.vercel.app",
       "• SwasthyaSetu: https://swastyasetu-three.vercel.app",
-      "• Smart Civic CityOS: https://smart-civic-pi.vercel.app"
+      "• SpeakLingo: https://github.com/nikhilthange/speaklingo",
+      "• WhatsApp Extractor: https://github.com/nikhilthange/whatsapp-group-extractor"
     ]
   },
   "hire": {
     title: "Priority Recruitment Protocol",
     output: [
-      "Status: READY_TO_DEPLOY",
-      "Notice Period: Immediate / Flexible",
+      "Status: READY_TO_DEPLOY // ACTIVE_SCREENING",
+      "Notice Period: Immediate (Internships) / Flexible",
       "Target Roles: Full Stack Engineer, Backend Engineer, Frontend Engineer (React 19), AI Systems SDE",
-      "Action: Email nikhilthange75@gmail.com with subject '[Interview Request] Opportunity for Nikhil Thange'"
+      "Action: Email nikhilthange75@gmail.com or WhatsApp (+91 9820078156) with subject '[Interview Request] Opportunity for Nikhil Thange'"
     ]
   }
 };

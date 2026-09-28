@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
             <span className="text-[#00D9FF]">//</span>
             <span className="text-[#8BE9FD]">SYSTEM_OS</span>
           </div>
-          <p className="text-slate-500 text-[10px] font-mono">
+          <p className="text-slate-400 text-[10px] font-mono">
             React 19 • TypeScript • Tailwind CSS • Vite
           </p>
         </div>

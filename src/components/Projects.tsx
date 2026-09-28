@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { 
   ArrowUpRight,
-  Workflow
+  Workflow,
+  Users
 } from 'lucide-react';
 import { FEATURED_PROJECTS } from '../data/portfolioData';
 import type { Project } from '../data/portfolioData';
@@ -80,8 +81,9 @@ export const Projects: React.FC = () => {
                     </span>
                   )}
                   {project.collaborators && (
-                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 border border-white/10 px-2 py-0.5 bg-white/5">
-                      👥 {project.collaborators}
+                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-300 border border-white/10 px-2 py-0.5 bg-white/5 inline-flex items-center gap-1.5">
+                      <Users className="w-3 h-3 text-[#00D9FF] shrink-0" />
+                      <span>{project.collaborators}</span>
                     </span>
                   )}
                 </div>

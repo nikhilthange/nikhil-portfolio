@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal } from 'lucide-react';
+import { Terminal, FileText, Download } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
 
@@ -8,7 +8,7 @@ interface HeroProps {
   onOpenResumeModal?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResumeModal }) => {
   const [taglineIndex, setTaglineIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
           <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-mono uppercase">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-            <span>AVAILABLE: SDE INTERN & FULL-TIME (2026–2027)</span>
+            <span>AVAILABLE IMMEDIATELY: SDE INTERN & FULL-TIME (2026–2027)</span>
           </div>
         </div>
 
@@ -84,6 +84,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
           <strong className="text-emerald-400 font-mono font-medium"> 500+ concurrent requests (sub-50ms P95)</strong> with Redis/MongoDB and deployed production applications on AWS with automated CI/CD.
         </p>
 
+        {/* Recruiter Quick Snapshot */}
+        <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-400 pt-1">
+          <span className="text-[#00D9FF]">RECRUITER_QUICKVIEW:</span>
+          <span className="px-2 py-0.5 bg-black/70 border border-white/10 text-slate-300">Mumbai, India (Open to Remote / Relocation)</span>
+          <span className="px-2 py-0.5 bg-black/70 border border-white/10 text-slate-300">B.E. IT (Mumbai Univ, 2027) • 7.50 CGPA</span>
+          <span className="px-2 py-0.5 bg-black/70 border border-emerald-500/30 text-emerald-400">Notice: Immediate</span>
+        </div>
+
         {/* Action Buttons */}
         <div className="flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center gap-2.5 sm:gap-3.5 pt-2">
           <a
@@ -94,12 +102,35 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
             [ 01 // View Projects ]
           </a>
 
+          {onOpenResumeModal ? (
+            <button
+              id="hero-quick-resume"
+              onClick={onOpenResumeModal}
+              className="btn-cyber-outline w-full xs:w-auto text-center flex items-center justify-center gap-1.5"
+              title="Inspect ATS Resume in interactive modal"
+            >
+              <FileText className="w-3.5 h-3.5 text-[#00D9FF]" />
+              <span>[ 02 // Inspect Resume ]</span>
+            </button>
+          ) : (
+            <a
+              id="hero-download-resume"
+              href="#resume"
+              className="btn-cyber-outline w-full xs:w-auto text-center"
+            >
+              [ 02 // Resume Record ]
+            </a>
+          )}
+
           <a
-            id="hero-download-resume"
-            href="#resume"
-            className="btn-cyber-outline w-full xs:w-auto text-center"
+            id="hero-direct-download"
+            href={PERSONAL_INFO.resumeUrl}
+            download={PERSONAL_INFO.resumeFileName}
+            className="btn-cyber-outline text-[#00D9FF] border-[#00D9FF]/40 w-full xs:w-auto text-center flex items-center justify-center gap-1.5"
+            title="Download PDF directly to device"
           >
-            [ 02 // Resume Record ]
+            <Download className="w-3.5 h-3.5" />
+            <span>[ Download PDF ]</span>
           </a>
 
           <a
@@ -112,16 +143,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal }) => {
 
           <button
             onClick={onOpenTerminal}
-            className="btn-cyber-outline text-[#00D9FF] border-[#00D9FF]/40 w-full xs:w-auto text-center"
+            className="btn-cyber-outline text-slate-300 border-white/20 w-full xs:w-auto text-center flex items-center justify-center gap-1.5"
           >
-            <Terminal className="w-3.5 h-3.5" />
+            <Terminal className="w-3.5 h-3.5 text-[#00D9FF]" />
             <span>[ CLI Shell ]</span>
           </button>
         </div>
 
         {/* Direct Social & Channels */}
         <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-4 border-t border-white/10 text-slate-400 text-xs font-mono">
-          <span className="text-slate-500 font-space tracking-wider uppercase">CONNECT:</span>
+          <span className="text-slate-400 font-space tracking-wider uppercase">VERIFIED_CHANNELS:</span>
           <a
             href={PERSONAL_INFO.socials.github}
             target="_blank"

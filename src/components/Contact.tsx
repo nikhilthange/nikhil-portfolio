@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Check, Copy, Loader2, AlertCircle, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check, Copy, Loader2, AlertCircle, ExternalLink, MessageSquare } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
@@ -93,21 +93,22 @@ export const Contact: React.FC = () => {
         {/* Left Column: Direct Info */}
         <div className="lg:col-span-5 space-y-4">
           <div className="p-4 sm:p-6 bg-black/80 border border-[#00D9FF]/20 corner-crosshair space-y-4 sm:space-y-5">
-            <div className="text-[10px] sm:text-xs font-space tracking-widest text-[#00D9FF] uppercase">
-              DIRECT_CHANNELS // SPEC
+            <div className="text-[10px] sm:text-xs font-space tracking-widest text-[#00D9FF] uppercase flex items-center justify-between">
+              <span>DIRECT_CHANNELS // SPEC</span>
+              <span className="text-emerald-400 font-mono text-[10px]">AVG RESPONSE: &lt;12H</span>
             </div>
 
             {/* Email */}
             <div className="p-3 sm:p-4 bg-slate-950/90 border border-white/5 flex items-center justify-between group hover:border-[#00D9FF]/40 transition-colors gap-2">
-              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                 <div className="p-2 bg-black border border-[#00D9FF]/30 text-[#00D9FF] shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
                   <div className="text-[9px] sm:text-[10px] font-space tracking-wider text-slate-400 uppercase">EMAIL_TRANSMISSION</div>
-                  <div className="text-xs font-mono text-white font-medium truncate">{PERSONAL_INFO.email}</div>
+                  <div className="text-xs font-mono text-white font-medium truncate hover:text-[#00D9FF]">{PERSONAL_INFO.email}</div>
                 </div>
-              </div>
+              </a>
               <button
                 onClick={() => copyToClipboard(PERSONAL_INFO.email, 'email')}
                 className="p-1.5 bg-black border border-white/10 hover:border-[#00D9FF] text-slate-300 hover:text-white transition-colors shrink-0"
@@ -119,15 +120,15 @@ export const Contact: React.FC = () => {
 
             {/* Phone */}
             <div className="p-3 sm:p-4 bg-slate-950/90 border border-white/5 flex items-center justify-between group hover:border-[#00D9FF]/40 transition-colors gap-2">
-              <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+              <a href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`} className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                 <div className="p-2 bg-black border border-[#00D9FF]/30 text-[#00D9FF] shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
                   <div className="text-[9px] sm:text-[10px] font-space tracking-wider text-slate-400 uppercase">TELEPHONY_VOICE</div>
-                  <div className="text-xs font-mono text-white font-medium truncate">{PERSONAL_INFO.phone}</div>
+                  <div className="text-xs font-mono text-white font-medium truncate hover:text-[#00D9FF]">{PERSONAL_INFO.phone}</div>
                 </div>
-              </div>
+              </a>
               <button
                 onClick={() => copyToClipboard(PERSONAL_INFO.phone, 'phone')}
                 className="p-1.5 bg-black border border-white/10 hover:border-[#00D9FF] text-slate-300 hover:text-white transition-colors shrink-0"
@@ -135,6 +136,32 @@ export const Contact: React.FC = () => {
               >
                 {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               </button>
+            </div>
+
+            {/* WhatsApp Direct Chat */}
+            <div className="p-3 sm:p-4 bg-slate-950/90 border border-emerald-500/20 flex items-center justify-between group hover:border-emerald-400/50 transition-colors gap-2">
+              <a
+                href={PERSONAL_INFO.socials.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1"
+              >
+                <div className="p-2 bg-black border border-emerald-500/40 text-emerald-400 shrink-0">
+                  <MessageSquare className="w-4 h-4" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-[9px] sm:text-[10px] font-space tracking-wider text-slate-400 uppercase">WHATSAPP_MESSAGING</div>
+                  <div className="text-xs font-mono text-emerald-400 font-medium truncate hover:underline">Instant Screening Chat &rarr;</div>
+                </div>
+              </a>
+              <a
+                href={PERSONAL_INFO.socials.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="p-1.5 bg-emerald-500/10 border border-emerald-500/40 hover:bg-emerald-500/20 text-emerald-400 transition-colors shrink-0 text-[10px] font-mono px-2"
+              >
+                [ CHAT ]
+              </a>
             </div>
 
             {/* Location */}
@@ -145,7 +172,7 @@ export const Contact: React.FC = () => {
               <div>
                 <div className="text-[9px] sm:text-[10px] font-space tracking-wider text-slate-400 uppercase">BASE_STATION</div>
                 <div className="text-xs font-mono text-white font-medium">{PERSONAL_INFO.location}</div>
-                <div className="text-[10px] font-mono text-slate-500">{PERSONAL_INFO.timezone}</div>
+                <div className="text-[10px] font-mono text-slate-400">{PERSONAL_INFO.timezone}</div>
               </div>
             </div>
 
@@ -226,32 +253,36 @@ export const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <div className="space-y-1">
                     <label htmlFor="form-name" className="text-[10px] sm:text-[11px] font-space tracking-wider uppercase text-slate-400">
-                      IDENTIFIER // NAME:
+                      RECRUITER / YOUR NAME: [ IDENTIFIER ]
                     </label>
                     <input
                       id="form-name"
+                      name="name"
                       type="text"
                       required
+                      autoComplete="name"
                       disabled={isSubmitting}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Recruiter / Engineering Lead"
+                      placeholder="e.g. Sarah Jenkins (Tech Recruiter)"
                       className="cyber-input disabled:opacity-50"
                     />
                   </div>
 
                   <div className="space-y-1">
                     <label htmlFor="form-email" className="text-[10px] sm:text-[11px] font-space tracking-wider uppercase text-slate-400">
-                      RETURN_DESTINATION // EMAIL:
+                      WORK EMAIL: [ RETURN DESTINATION ]
                     </label>
                     <input
                       id="form-email"
+                      name="email"
                       type="email"
                       required
+                      autoComplete="email"
                       disabled={isSubmitting}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="e.g. lead@company.com"
+                      placeholder="e.g. s.jenkins@company.com"
                       className="cyber-input disabled:opacity-50"
                     />
                   </div>
@@ -259,16 +290,17 @@ export const Contact: React.FC = () => {
 
                 <div className="space-y-1">
                   <label htmlFor="form-message" className="text-[10px] sm:text-[11px] font-space tracking-wider uppercase text-slate-400">
-                    DISPATCH_PAYLOAD // MESSAGE:
+                    MESSAGE / OPPORTUNITY DETAILS:
                   </label>
                   <textarea
                     id="form-message"
+                    name="message"
                     required
                     rows={4}
                     disabled={isSubmitting}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe the opportunity, engineering role, or collaboration..."
+                    placeholder="Describe the engineering role, team, stack, or interview schedule..."
                     className="cyber-input resize-none disabled:opacity-50"
                   />
                 </div>

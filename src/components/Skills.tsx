@@ -78,43 +78,65 @@ export const Skills: React.FC = () => {
       </div>
 
       {/* Grid of Skill Categories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {filteredCategories.map((cat) => (
-          <div
-            key={cat.category}
-            className="p-4 sm:p-6 bg-black/80 border border-[#00D9FF]/20 corner-crosshair space-y-3.5 hover:border-[#00D9FF]/50 transition-all duration-300"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between pb-3 border-b border-white/10">
-              <h4 className="text-xs sm:text-sm font-space font-semibold text-white tracking-wider uppercase">
-                {cat.category}
-              </h4>
-              <span className="text-[10px] sm:text-[11px] font-mono text-[#00D9FF]">
-                [{cat.skills.length} ITEMS]
-              </span>
-            </div>
-
-            {/* Skills List */}
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
-              {cat.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="px-2 py-1 bg-slate-950/90 border border-white/10 hover:border-[#00D9FF]/50 transition-colors flex items-center gap-1.5"
-                >
-                  <span className="text-[11px] sm:text-xs font-mono text-slate-200">
-                    {skill.name}
-                  </span>
-                  {skill.tag && (
-                    <span className="text-[9px] sm:text-[10px] font-mono text-[#00D9FF] bg-[#00D9FF]/10 px-1 rounded">
-                      {skill.tag}
-                    </span>
-                  )}
-                </div>
-              ))}
-            </div>
+      {filteredCategories.length === 0 ? (
+        <div className="p-8 text-center bg-black/60 border border-white/10 space-y-3">
+          <div className="text-xs sm:text-sm font-mono text-[#00D9FF]">
+            TELEMETRY_NOTICE // No skills found matching "{searchQuery}"
           </div>
-        ))}
-      </div>
+          <p className="text-xs text-slate-400 font-light">
+            Try searching for another technology such as React, Docker, Python, Redis, or AWS.
+          </p>
+          <div>
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                setActiveCategory('All');
+              }}
+              className="btn-cyber-outline text-xs py-1.5 px-4 mt-2 inline-flex items-center gap-1.5"
+            >
+              <span>[ Reset Stack Filters ]</span>
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          {filteredCategories.map((cat) => (
+            <div
+              key={cat.category}
+              className="p-4 sm:p-6 bg-black/80 border border-[#00D9FF]/20 corner-crosshair space-y-3.5 hover:border-[#00D9FF]/50 transition-all duration-300"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                <h4 className="text-xs sm:text-sm font-space font-semibold text-white tracking-wider uppercase">
+                  {cat.category}
+                </h4>
+                <span className="text-[10px] sm:text-[11px] font-mono text-[#00D9FF]">
+                  [{cat.skills.length} ITEMS]
+                </span>
+              </div>
+
+              {/* Skills List */}
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                {cat.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className="px-2 py-1 bg-slate-950/90 border border-white/10 hover:border-[#00D9FF]/50 transition-colors flex items-center gap-1.5"
+                  >
+                    <span className="text-[11px] sm:text-xs font-mono text-slate-200">
+                      {skill.name}
+                    </span>
+                    {skill.tag && (
+                      <span className="text-[9px] sm:text-[10px] font-mono text-[#00D9FF] bg-[#00D9FF]/10 px-1 rounded">
+                        {skill.tag}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

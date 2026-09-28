@@ -157,7 +157,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             )}
-            {project.githubUrl && (
+            {project.githubUrl ? (
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -167,6 +167,17 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               >
                 <GithubIcon className="w-3.5 h-3.5" />
                 <span>[ Code ]</span>
+              </a>
+            ) : (
+              <a
+                href="https://github.com/nikhilthange"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cyber-outline py-1.5 px-3 text-xs flex items-center gap-1.5 text-slate-300 hover:text-white hover:border-[#00D9FF]"
+                title="Browse Nikhil's GitHub Profile"
+              >
+                <GithubIcon className="w-3.5 h-3.5" />
+                <span>[ GitHub Profile ]</span>
               </a>
             )}
             <button
