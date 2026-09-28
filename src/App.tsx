@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Preloader } from './components/Preloader';
 import { ParticleBackground } from './components/ParticleBackground';
 import { Sidebar } from './components/Sidebar';
@@ -90,6 +91,9 @@ export const App: React.FC = () => {
         isOpen={isResumeModalOpen}
         onClose={() => setIsResumeModalOpen(false)}
       />
+
+      {/* Vercel Analytics — tracks every portfolio visit automatically */}
+      <Analytics />
     </div>
   );
 };
