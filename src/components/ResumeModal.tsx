@@ -89,6 +89,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             src={`${resumePath}#toolbar=1&navpanes=0&scrollbar=1`}
             title="Nikhil Thange Resume Viewer"
             className="w-full h-full border-0"
+            tabIndex={-1}
+            loading="lazy"
           />
 
           {/* Fallback bar */}

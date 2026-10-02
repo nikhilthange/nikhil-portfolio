@@ -176,10 +176,10 @@ export const FEATURED_PROJECTS: Project[] = [
     id: "swastyasetu",
     title: "SwasthyaSetu | Rural Healthcare Continuity & Referral Layer",
     subtitle: "Offline-First Distributed Sync, Hugging Face TrOCR & 2G GSM Fallback",
-    description: "A mission-critical offline-first healthcare continuity platform engineered for the MUSA Codex Hackathon (Top 7 Finalist), connecting rural Primary Health Centres (PHCs) and district hospitals. Guarantees zero referral loss during broadband blackouts through Dexie.js (IndexedDB) local queueing, idempotent auto-sync to PostgreSQL/Prisma backends, Hugging Face TrOCR prescription extraction, and ≤160-char 2G SMS emergency fallback.",
+    description: "A mission-critical offline-first healthcare continuity platform engineered for the MUSA Codex Hackathon (Top 15 Finalist), connecting rural Primary Health Centres (PHCs) and district hospitals. Guarantees zero referral loss during broadband blackouts through Dexie.js (IndexedDB) local queueing, idempotent auto-sync to PostgreSQL/Prisma backends, Hugging Face TrOCR prescription extraction, and ≤160-char 2G SMS emergency fallback.",
     category: "Full Stack & AI",
     featured: true,
-    badge: "TOP 7 FINALIST • MUSA CODEX",
+    badge: "TOP 15 FINALIST • MUSA CODEX",
     collaborators: "Team Project with Aniket Vishwakarma (MUSA Codex Hackathon)",
     technologies: [
       "React 19", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM", 
@@ -194,7 +194,7 @@ export const FEATURED_PROJECTS: Project[] = [
       { label: "Care Roles", value: "4 Multi-Tenant" }
     ],
     highlights: [
-      "MUSA Codex Hackathon Top 7 Finalist: Awarded Top 7 finish among competing engineering teams for architecting a resilient offline triage and referral data pipeline that operates reliably during zero-broadband rural blackouts.",
+      "MUSA Codex Hackathon Top 15 Finalist: Awarded Top 15 finish among competing engineering teams for architecting a resilient offline triage and referral data pipeline that operates reliably during zero-broadband rural blackouts.",
       "Offline-First Dexie.js Persistence: Engineered client-side IndexedDB caching via Dexie.js, guaranteeing zero data loss for patient vitals, emergency STEMI referrals, and clinical notes during rural broadband outages.",
       "Server-Side Deduplication & Auto-Sync: Architected an idempotent background sync protocol (event_id hashing) reconciling local device records into PostgreSQL via Prisma ORM as soon as network connectivity is restored.",
       "Hugging Face TrOCR Vision Pipeline: Integrated TrOCR transformer model for transcribing handwritten medical prescriptions and discharge summaries with human-in-the-loop split-screen clinician review.",
@@ -364,20 +364,20 @@ export const WORK_EXPERIENCE: Experience[] = [
     location: "Remote",
     type: "Internship",
     technologies: [
-      "React 19", "TypeScript", "Node.js", "Express.js", "PostgreSQL", 
-      "AWS (S3, CloudFront, EC2)", "Jest", "Supertest", "TanStack Query", "Tailwind CSS", "Redis"
+      "React 18", "TypeScript", "Node.js", "Express.js", "AWS (EC2, S3, DynamoDB, SQS)", 
+      "Redis", "Docker", "Tailwind CSS", "GitHub Actions CI/CD"
     ],
     achievements: [
-      "High-Converting Cloud Architecture: Boosted user lead conversion rates by 25% and slashed page load time by 40% by architecting a responsive React 19 SPA with TanStack Query caching, deployed via AWS (S3, CloudFront CDN, EC2).",
-      "Core Web Vitals Engineering: Reduced Cumulative Layout Shift (CLS) by 30% and cut First Contentful Paint (FCP) to <800ms by engineering the ReelIt video streaming feed with DOM virtualization and asynchronous lazy loading in Tailwind CSS.",
-      "High-Throughput Microservices: Stabilized P95 REST API response latency to sub-65ms across 20+ endpoints by building Node.js/Express services with Redis caching, optimized PostgreSQL queries, and documented OpenAPI/Swagger schemas.",
-      "Automated Testing & CI/CD: Decreased production defect escapes by 35% by implementing automated unit/integration test suites using Jest & Supertest (85%+ code coverage), integrated into GitHub Actions CI/CD pipelines in Agile sprints."
+      "Frontend Architecture & Landing Page: Architected a high-converting landing page and attendee portal using React 18, TypeScript, and Tailwind CSS; built custom fullscreen media galleries, cutting load times to under 800ms and driving a 25% conversion lift.",
+      "Distributed Backend & Media Pipelines: Built high-throughput Node.js/Express services with direct-to-S3 presigned multipart uploads; deployed AWS SQS workers for media transcoding, eliminating server memory starvation during batch ingestions.",
+      "Cloud Database & Cache Optimization: Modeled low-latency AWS DynamoDB schemas with Global Secondary Indexes (GSI), cutting query latency by 40%; deployed multi-tier Redis caching to stabilize P95 API latency to sub-65ms.",
+      "Production Reliability & Root-Cause Debugging: Diagnosed and resolved critical bottlenecks across S3 storage quotas, EC2 blue-green container routing, and DynamoDB full scans; enforced 85%+ test coverage in GitHub Actions CI/CD."
     ],
     metrics: [
-      { label: "Conversion Boost", value: "+25%", detail: "Optimized React 19 SPA & TanStack caching" },
-      { label: "Load Time Reduction", value: "-40%", detail: "AWS S3 + CloudFront Edge CDN distribution" },
-      { label: "P95 API Latency", value: "<65ms", detail: "Across 20+ Node.js microservices with Redis" },
-      { label: "Test Coverage", value: "85%+", detail: "Jest & Supertest automated CI/CD pipelines" }
+      { label: "Conversion Lift", value: "+25%", detail: "Optimized React 18 portal & custom media galleries" },
+      { label: "Page Load Time", value: "<800ms", detail: "High-performance Core Web Vitals" },
+      { label: "Query Latency", value: "-40%", detail: "AWS DynamoDB GSI index architecture" },
+      { label: "P95 API Latency", value: "<65ms", detail: "Multi-tier Redis caching & SQS workers" }
     ]
   }
 ];
@@ -460,39 +460,39 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const ACHIEVEMENTS: Achievement[] = [
   {
     id: "musa-codex",
-    title: "MUSA Codex Hackathon — Top 7 Finalist",
+    title: "MUSA Codex National Hackathon — Top 15 Finalist",
     issuer: "MUSA Codex Hackathon",
-    description: "Secured Top 7 Finalist standing among competing teams with SwasthyaSetu — an offline-first rural healthcare triage and continuity platform featuring Dexie.js auto-sync, Hugging Face TrOCR AI transcription, and 2G GSM emergency fallback.",
-    badge: "Top 7 Finalist",
-    icon: "Trophy",
-    date: "2026"
-  },
-  {
-    id: "quasar",
-    title: "Quasar 4.0 Hackathon Finalist",
-    issuer: "Quasar Tech Innovation",
-    description: "Selected among top finalist teams for designing an AI-driven Civic-Tech distributed system with real-time vision triage and high-throughput dispatch.",
-    badge: "Finalist & Top Innovator",
+    description: "Top 15 Finalist (2026) – Built SwasthyaSetu offline emergency triage platform with Dexie.js sync and Hugging Face TrOCR OCR.",
+    badge: "Top 15 Finalist",
     icon: "Trophy",
     date: "2026"
   },
   {
     id: "ibm-cert",
-    title: "IBM Full Stack Software Architecture Certified",
+    title: "IBM Full Stack Software Developer Certification",
     issuer: "IBM",
-    description: "Certified in Enterprise Microservices, RESTful API Design, Cloud Deployment, and Secure Scalable Backend Engineering.",
+    description: "Certified in Microservices, Cloud Architecture, and RESTful APIs.",
     badge: "Professional Certification",
     icon: "Award",
     date: "Verified"
   },
   {
-    id: "open-source",
-    title: "Open Source Quality & Benchmarks",
-    issuer: "Developer Community",
-    description: "Maintained 100% test coverage and sub-100ms API benchmarks across open-source full-stack repositories.",
-    badge: "100% Test Coverage",
+    id: "dsa-problems",
+    title: "Data Structures & Algorithms",
+    issuer: "LeetCode & GeeksforGeeks",
+    description: "Solved 250+ coding challenges across LeetCode and GeeksforGeeks with strong problem-solving in graphs, DP, trees, and system design.",
+    badge: "250+ Problems Solved",
     icon: "Sparkles",
     date: "Continuous"
+  },
+  {
+    id: "quasar",
+    title: "Quasar 4.0 Hackathon (2026)",
+    issuer: "Quasar Tech Innovation",
+    description: "Engineered a Student Placement portal to automate campus recruitment workflows and candidate evaluation pipelines.",
+    badge: "Hackathon Finalist",
+    icon: "Trophy",
+    date: "2026"
   }
 ];
 
@@ -507,15 +507,14 @@ export const EDUCATION_LIST: Education[] = [
     scoreLabel: "CGPA",
     coursework: [
       "Data Structures & Algorithms",
-      "Database Management Systems (DBMS)",
+      "DBMS",
       "Operating Systems",
       "Computer Networks",
-      "Object-Oriented Programming (OOP)",
-      "System Design & Cloud Basics"
+      "System Design"
     ],
     highlights: [
-      "Top 7 Finalist at MUSA Codex National Hackathon",
-      "Quasar 4.0 Hackathon Finalist & Top Innovator"
+      "Top 15 Finalist at MUSA Codex National Hackathon",
+      "Quasar 4.0 Hackathon"
     ]
   },
   {
@@ -590,7 +589,7 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "2. [HireMate / Interview AI] AI-Powered Recruitment Intelligence Platform",
       "   - NVIDIA NIM LLMs streaming (<300ms), 88% ATS match accuracy, Multi-tenant RBAC",
       "   - Demo: https://hiremate-portal.vercel.app | Repo: https://github.com/nikhilthange/ai-powered-interview-hiring-platform",
-      "3. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (MUSA Codex Hackathon — Top 7 Finalist)",
+      "3. [SwasthyaSetu] Offline-First Rural Healthcare Continuity Layer (MUSA Codex Hackathon — Top 15 Finalist)",
       "   - Dexie.js IndexedDB, 0% data loss sync, Hugging Face TrOCR, PostgreSQL & Prisma, 2G SMS Fallback",
       "   - Team: Nikhil Thange & Aniket Vishwakarma",
       "   - Demo: https://swastyasetu-three.vercel.app | Repo: https://github.com/aniketvishwakarma-11/Swastyasetu",
@@ -641,7 +640,7 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
   "swastyasetu": {
     title: "SwasthyaSetu — Offline-First Rural Healthcare Continuity Layer",
     output: [
-      "Hackathon: MUSA Codex Hackathon (Top 7 Finalist Standing)",
+      "Hackathon: MUSA Codex Hackathon (Top 15 Finalist Standing)",
       "Role: Full Stack & Systems Architecture (Team Project with Aniket Vishwakarma)",
       "Core Innovation: 100% offline-first referral survival with Dexie.js (IndexedDB) & auto-reconnect sync",
       "AI Pipeline: Hugging Face TrOCR vision transformer transcribes cursive handwritten medical prescriptions",
@@ -677,10 +676,10 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     title: "Work Experience",
     output: [
       "Chitralai — Software Development Engineer Intern (Jul 2026 – Present, Remote)",
-      "• Boosted user lead conversion by 25% and slashed page load time by 40% with React 19 SPA + AWS CDN.",
-      "• Cut FCP to <800ms and CLS by 30% with DOM virtualization.",
-      "• Stabilized P95 REST latency to <65ms across 20+ endpoints with Node.js & Redis.",
-      "• Maintained 85%+ Jest & Supertest test coverage in GitHub Actions CI/CD."
+      "• Frontend: Built high-converting portal with React 18, TS, and Tailwind CSS; load time <800ms (+25% conversion).",
+      "• Backend: Direct-to-S3 presigned multipart uploads & AWS SQS background media transcoding workers.",
+      "• Database: AWS DynamoDB GSI key modeling (-40% query latency) & multi-tier Redis caching (sub-65ms P95).",
+      "• Reliability: Root-cause debugging on S3 quotas & EC2 port routing; 85%+ test coverage in GitHub Actions CI/CD."
     ]
   },
   "metrics": {

@@ -31,7 +31,7 @@ This repository hosts the official engineering portfolio of **Nikhil Ankush Than
 | :--- | :--- | :--- | :--- | :--- |
 | **CityOS** | Civic Tech & CV | React 19, YOLOv8, PyTorch, Node.js, Redis, MongoDB 2dsphere | 91.4% mAP50 • 500+ req/s P95 | [Live](https://smart-civic-pi.vercel.app) • [Repo](https://github.com/nikhilthange/smart-civic) |
 | **HireMate** | Recruitment AI | React 19, NVIDIA NIM LLMs, WebSockets, Multi-Tenant RBAC | &lt;300ms Token Stream • 88% ATS Match | [Live](https://hiremate-portal.vercel.app) • [Repo](https://github.com/nikhilthange/ai-powered-interview-hiring-platform) |
-| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), TrOCR, Prisma, GSM SMS | **Top 7 Finalist (MUSA Codex)** • 100% Offline Survival | [Live](https://swastyasetu-three.vercel.app) • [Repo](https://github.com/aniketvishwakarma-11/Swastyasetu) |
+| **SwasthyaSetu** | Offline-First Health | React 19, Dexie.js (IndexedDB), TrOCR, Prisma, GSM SMS | **Top 15 Finalist (MUSA Codex)** • 100% Offline Survival | [Live](https://swastyasetu-three.vercel.app) • [Repo](https://github.com/aniketvishwakarma-11/Swastyasetu) |
 | **CricNova AI** | Sports Analytics | TypeScript, React 19, REST APIs, ML Models, Vite | Real-Time Telemetry • Predictive Win Curve | [Live](https://cricnova-ai.vercel.app) • [Repo](https://github.com/nikhilthange/cricnova-ai) |
 | **SpeakLingo** | Real-Time WebRTC | React 19, WebRTC, Socket.IO, Web Speech API, Google STUN | &lt;120ms P2P Latency • 60fps Stream | [Repo](https://github.com/nikhilthange/speaklingo) |
 | **WhatsApp Extractor** | Headless Automation | Node.js, Puppeteer, whatsapp-web.js, Socket.IO, ExcelJS | &le;256MB RAM Cap • 10k+ Contact Crawls | [Repo](https://github.com/nikhilthange/whatsapp-group-extractor) |

@@ -197,7 +197,7 @@
     linear-gradient(to bottom, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Print Optimization */
+/* Print Optimization for Recruiter PDF / Paper Export */
 @media print {
   aside, 
   canvas, 
@@ -209,13 +209,16 @@
   #projects, 
   #skills, 
   #contact,
-  button {
+  nav,
+  button,
+  .no-print {
     display: none !important;
   }
 
   body, html {
     background: #ffffff !important;
-    color: #000000 !important;
+    color: #0f172a !important;
+    font-size: 10pt !important;
   }
 
   #resume {
@@ -225,11 +228,32 @@
     max-width: 100% !important;
   }
 
-  #resume * {
-    color: #000000 !important;
-    background: transparent !important;
-    border-color: #cccccc !important;
+  .ats-resume-sheet {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: none !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .ats-resume-sheet * {
+    color: #0f172a !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+
+  .ats-resume-sheet h1,
+  .ats-resume-sheet h2,
+  .ats-resume-sheet h3,
+  .ats-resume-sheet h4 {
+    color: #000000 !important;
+  }
+
+  .ats-resume-sheet a {
+    text-decoration: underline !important;
+    color: #0284c7 !important;
   }
 
   .lg\:pl-64, .xl\:pl-72 {

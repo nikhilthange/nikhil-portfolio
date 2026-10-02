@@ -37,10 +37,26 @@ export const App: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Ensure landing page starts at the top (Hero) and prevent browsers from restoring previous scrolled positions
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    if (!window.location.hash || window.location.hash === '#hero') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white relative selection:bg-[#00D9FF] selection:text-black flex flex-col lg:flex-row">
       {/* Cinematic Intro Preloader */}
-      <Preloader />
+      <Preloader
+        onComplete={() => {
+          if (!window.location.hash || window.location.hash === '#hero') {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+          }
+        }}
+      />
 
       {/* Ambient Neural Particle Background */}
       <ParticleBackground />
