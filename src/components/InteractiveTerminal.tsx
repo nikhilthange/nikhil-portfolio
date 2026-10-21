@@ -150,7 +150,7 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({ isOpen
     }
   };
 
-  const quickCommands = ['whoami', 'skills', 'projects', 'experience', 'metrics', 'resume', 'hire', 'clear'];
+  const quickCommands = ['whoami', 'skills', 'projects', 'experience', 'kanishka', 'certificate', 'metrics', 'resume', 'hire', 'clear'];
 
   return (
     <div 

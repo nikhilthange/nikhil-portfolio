@@ -1,10 +1,26 @@
-import React from 'react';
-import { Calendar, MapPin, Trophy, Award, Sparkles, GraduationCap, BookOpen } from 'lucide-react';
+import React, { useState } from 'react';
+import { Calendar, MapPin, Trophy, Award, Sparkles, GraduationCap, BookOpen, CheckCircle2, Download, ExternalLink, ShieldCheck, FileText } from 'lucide-react';
 import { WORK_EXPERIENCE, ACHIEVEMENTS, EDUCATION_LIST } from '../data/portfolioData';
+import { CertificateModal, type DocumentModalData } from './CertificateModal';
 
 export const Experience: React.FC = () => {
+  const [selectedDoc, setSelectedDoc] = useState<DocumentModalData | null>(null);
+  const [isCertModalOpen, setIsCertModalOpen] = useState(false);
+
+  const handleOpenDoc = (doc: DocumentModalData) => {
+    setSelectedDoc(doc);
+    setIsCertModalOpen(true);
+  };
+
   return (
     <section id="experience" className="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto relative z-10 scroll-mt-16 lg:scroll-mt-0">
+      {/* Experience Certificate & Letter Interactive Modal */}
+      <CertificateModal 
+        isOpen={isCertModalOpen} 
+        onClose={() => setIsCertModalOpen(false)} 
+        document={selectedDoc} 
+      />
+
       {/* Section Header */}
       <div className="space-y-2 mb-8 sm:mb-12 text-left">
         <h2 className="text-[10px] sm:text-xs font-space tracking-[0.2em] sm:tracking-[0.25em] text-[#00D9FF] uppercase font-semibold">
@@ -31,10 +47,17 @@ export const Experience: React.FC = () => {
                   <span className="text-[10px] sm:text-[11px] font-space tracking-widest uppercase text-[#00D9FF] bg-[#00D9FF]/10 px-2 py-0.5 border border-[#00D9FF]/30">
                     {exp.type}
                   </span>
-                  <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    ACTIVE_ROLE
-                  </span>
+                  {exp.status === 'completed' || !exp.period.includes('Present') ? (
+                    <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400 flex items-center gap-1.5 bg-emerald-500/10 px-2 py-0.5 border border-emerald-500/30">
+                      <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                      COMPLETED // VERIFIED_TENURE
+                    </span>
+                  ) : (
+                    <span className="text-[10px] sm:text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      ACTIVE_ROLE
+                    </span>
+                  )}
                 </div>
 
                 <h4 className="text-lg sm:text-xl md:text-2xl font-space font-medium text-white tracking-wide uppercase mt-1.5 leading-snug">
@@ -98,6 +121,71 @@ export const Experience: React.FC = () => {
                 })}
               </div>
             </div>
+
+            {/* Official Experience Certificate & Verification Banner */}
+            {exp.verification && (
+              <div className="p-3.5 sm:p-4 bg-slate-950/90 border border-emerald-500/30 corner-crosshair space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2.5 border-b border-white/10 text-xs font-mono">
+                  <div className="flex items-center gap-2">
+                    {exp.status === 'active' ? (
+                      <FileText className="w-4 h-4 text-emerald-400 shrink-0" />
+                    ) : (
+                      <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                    )}
+                    <span className="text-white font-medium">
+                      {exp.id === 'kanishka' ? 'OFFICIAL INTERNSHIP APPOINTMENT LETTER' : 'OFFICIAL EXPERIENCE CERTIFICATE ISSUED'}
+                    </span>
+                    <span className="text-emerald-400 text-[10px] px-1.5 py-0.5 bg-emerald-500/10 border border-emerald-500/30 font-mono">
+                      {exp.status === 'active' ? `EFFECTIVE: ${exp.verification.date}` : `DATE: ${exp.verification.date}`}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => handleOpenDoc({
+                        title: exp.id === 'kanishka' ? 'KANISHKA CONSULTANCY // INTERNSHIP LETTER' : 'CHITRALAI // SDE EXPERIENCE CERTIFICATE',
+                        subtitle: exp.id === 'kanishka' ? 'KC/I/HR/1142 • Effective: 21st Oct 2026' : '14 Jul 2026 – 14 Oct 2026 • Issued: 15-10-2026',
+                        documentPath: exp.certificateUrl || (exp.id === 'kanishka' ? '/kanishka-internship-letter.pdf' : '/chitralai-experience-certificate.pdf'),
+                        downloadFileName: exp.id === 'kanishka' ? 'Nikhil_Thange_Kanishka_Internship_Letter.pdf' : 'Nikhil_Thange_Chitralai_Certificate.pdf',
+                        badge: exp.status === 'active' ? 'ACTIVE' : 'VERIFIED',
+                        organization: exp.verification?.location || exp.company,
+                        tenure: exp.period,
+                        signatory: exp.verification?.issuer,
+                        quote: exp.verification?.quote,
+                        website: exp.verification?.website,
+                        email: exp.verification?.contact
+                      })}
+                      className="btn-cyber-primary py-1 px-3 text-[11px] flex items-center gap-1.5 shadow-[0_0_10px_rgba(0,217,255,0.25)]"
+                    >
+                      <ExternalLink className="w-3 h-3" />
+                      <span>{exp.id === 'kanishka' ? '[ View Letter ]' : '[ View Certificate ]'}</span>
+                    </button>
+                    <a
+                      href={exp.certificateUrl || (exp.id === 'kanishka' ? '/kanishka-internship-letter.pdf' : '/chitralai-experience-certificate.pdf')}
+                      download={exp.id === 'kanishka' ? 'Nikhil_Thange_Kanishka_Internship_Letter.pdf' : 'Nikhil_Thange_Chitralai_Certificate.pdf'}
+                      className="btn-cyber-outline py-1 px-2.5 text-[11px] flex items-center gap-1 text-slate-300 hover:text-white"
+                      title={exp.id === 'kanishka' ? 'Download appointment letter PDF' : 'Download verified experience certificate'}
+                    >
+                      <Download className="w-3 h-3 text-emerald-400" />
+                      <span>[ PDF ]</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="text-[11px] font-mono text-slate-400 space-y-1.5">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                    <span><strong className="text-slate-300">Authority:</strong> {exp.verification.issuer}</span>
+                    <span className="text-slate-600 hidden sm:inline">|</span>
+                    <span><strong className="text-slate-300">Office:</strong> {exp.verification.location}</span>
+                  </div>
+                  {exp.verification.quote && (
+                    <div className="text-slate-300 italic font-light pt-1 text-xs bg-black/50 p-2.5 border-l-2 border-emerald-400">
+                      &ldquo;{exp.verification.quote}&rdquo;
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
 
             {/* Tech Stack Pills */}
             <div className="pt-3 border-t border-white/10 flex flex-wrap gap-1.5">
@@ -231,6 +319,37 @@ export const Experience: React.FC = () => {
                   <p className="text-xs text-slate-400 font-light leading-relaxed">
                     {ach.description}
                   </p>
+
+                  {ach.certificateUrl && (
+                    <div className="pt-2 flex flex-wrap items-center gap-2">
+                      <button
+                        onClick={() => handleOpenDoc({
+                          title: ach.id === 'kanishka-letter' ? 'KANISHKA CONSULTANCY // INTERNSHIP APPOINTMENT' : 'CHITRALAI // SDE EXPERIENCE CERTIFICATE',
+                          subtitle: ach.id === 'kanishka-letter' ? 'Ref: KC/I/HR/1142 • Effective 21-10-2026' : '14 Jul 2026 – 14 Oct 2026 • Verified 15-10-2026',
+                          documentPath: ach.certificateUrl!,
+                          downloadFileName: ach.id === 'kanishka-letter' ? 'Nikhil_Thange_Kanishka_Internship_Letter.pdf' : 'Nikhil_Thange_Chitralai_Certificate.pdf',
+                          badge: ach.id === 'kanishka-letter' ? 'ACTIVE' : 'VERIFIED',
+                          organization: ach.issuer,
+                          tenure: ach.id === 'kanishka-letter' ? 'Six-Months Internship (Starting 21st Oct 2026)' : '14th July 2026 to 14th October 2026',
+                          signatory: ach.id === 'kanishka-letter' ? 'Vinay Vikram Singh & Snehal Umbarkar, Partners' : 'Bindu Potti, Co-Founder - Chitralai',
+                          quote: ach.description
+                        })}
+                        className="btn-cyber-primary py-1 px-3 text-[11px] flex items-center gap-1.5 shadow-[0_0_10px_rgba(0,217,255,0.25)]"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>{ach.id === 'kanishka-letter' ? '[ View Letter ]' : '[ View Certificate ]'}</span>
+                      </button>
+                      <a
+                        href={ach.certificateUrl}
+                        download={ach.id === 'kanishka-letter' ? 'Nikhil_Thange_Kanishka_Internship_Letter.pdf' : 'Nikhil_Thange_Chitralai_Certificate.pdf'}
+                        className="btn-cyber-outline py-1 px-2.5 text-[11px] flex items-center gap-1 text-slate-300 hover:text-white"
+                        title={ach.id === 'kanishka-letter' ? 'Download appointment letter PDF' : 'Download certificate PDF'}
+                      >
+                        <Download className="w-3 h-3 text-emerald-400" />
+                        <span>[ PDF ]</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             );

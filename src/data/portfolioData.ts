@@ -25,9 +25,19 @@ export interface Experience {
   period: string;
   location: string;
   type: string;
+  status?: 'active' | 'completed';
   technologies: string[];
   achievements: string[];
   metrics: { label: string; value: string; detail: string }[];
+  certificateUrl?: string;
+  verification?: {
+    date: string;
+    issuer: string;
+    location: string;
+    contact?: string;
+    website?: string;
+    quote?: string;
+  };
 }
 
 export interface SkillCategory {
@@ -45,6 +55,7 @@ export interface Achievement {
   badge: string;
   icon: string;
   date?: string;
+  certificateUrl?: string;
 }
 
 export interface Education {
@@ -61,19 +72,19 @@ export interface Education {
 
 export const PERSONAL_INFO = {
   name: "Nikhil Ankush Thange",
-  role: "Full Stack Software Engineer",
+  role: "Full Stack & AI Systems Engineer",
   taglines: [
-    "Full Stack Software Engineer",
-    "Distributed Backend & Microservices Engineer",
+    "AI Integration Intern @ Kanishka Consultancy",
+    "Full Stack & Distributed Backend Engineer",
     "Computer Vision & AI Systems Developer",
     "React 19 & TypeScript Specialist"
   ],
-  bio: "Full Stack Software Engineer specializing in high-concurrency microservices, reactive React 19/TypeScript architectures, and computer vision AI pipelines. Engineered distributed backends sustaining 500+ concurrent requests (sub-50ms P95) with Redis/MongoDB and deployed production applications on AWS. Dedicated to writing clean, test-driven code (Jest/Vitest) and automating CI/CD release cycles.",
+  bio: "Full Stack & AI Systems Engineer specializing in enterprise AI integration pipelines, high-concurrency microservices, and computer vision models. Currently engineering AI integration pipelines and LLM microservice connectors as an AI Integration Intern at Kanishka Consultancy (Mumbai); previously SDE Intern at Chitralai optimizing high-throughput AWS architectures. Dedicated to writing clean, test-driven code and automating CI/CD release cycles.",
   location: "Mumbai, MH, India",
   timezone: "Asia/Kolkata (IST, UTC+5:30)",
   email: "nikhilthange75@gmail.com",
   phone: "+91 9820078156",
-  availability: "Available Immediately for SDE Intern & Full-Time Software Roles (2026–2027)",
+  availability: "Currently AI Integration Intern @ Kanishka Consultancy (Open to Full-Time SDE & AI Systems Roles 2027)",
   socials: {
     linkedin: "https://www.linkedin.com/in/nikhil-thange-001bb52b5",
     github: "https://github.com/nikhilthange",
@@ -86,6 +97,8 @@ export const PERSONAL_INFO = {
     whatsapp: "https://wa.me/919820078156?text=Hi%20Nikhil%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20engineering%20opportunity.",
     email: "mailto:nikhilthange75@gmail.com",
     resume: "/resume.pdf",
+    kanishkaLetter: "/kanishka-internship-letter.pdf",
+    chitralaiCert: "/chitralai-experience-certificate.pdf"
   },
   resumeUrl: "/resume.pdf",
   resumeFileName: "Nikhil_Thange_Resume.pdf"
@@ -357,12 +370,54 @@ export const FEATURED_PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: Experience[] = [
   {
+    id: "kanishka",
+    role: "AI Integration Intern",
+    company: "Kanishka Consultancy",
+    period: "Oct 2026 – Present",
+    location: "Mumbai, Maharashtra, India",
+    type: "Internship (Active)",
+    status: "active",
+    certificateUrl: "/kanishka-internship-letter.pdf",
+    verification: {
+      date: "21-10-2026",
+      issuer: "Vinay Vikram Singh & Snehal Umbarkar, Partners — Kanishka Consultancy",
+      location: "Mumbai 400 072, Maharashtra",
+      quote: "Duties: Intern - AI Integration Intern. Reporting to Mehul Gondhalekar, Senior Technical Manager (Ref: KC/I/HR/1142)."
+    },
+    technologies: [
+      "Python", "Node.js", "TypeScript", "LLM Integration", "RESTful APIs", 
+      "AI Prompt Engineering", "Docker", "Structured Outputs", "Microservices"
+    ],
+    achievements: [
+      "Enterprise AI Integration Pipelines: Designing and deploying resilient AI integration pipelines connecting core client workflows with state-of-the-art LLMs and proprietary data sources.",
+      "Backend Connectors & API Middleware: Architecting Node.js and Python microservices to orchestrate real-time model queries, serialize structured outputs, and interface with enterprise backends.",
+      "Prompt Optimization & Guardrails: Engineering dynamic few-shot prompt templates and schema validators to minimize latency, prevent token bloat, and eliminate hallucinations in production.",
+      "Cross-Functional Systems Collaboration: Reporting to Senior Technical Management (Mehul Gondhalekar) to troubleshoot integration bottlenecks, optimize throughput, and ensure strict compliance."
+    ],
+    metrics: [
+      { label: "Tenure Track", value: "6-Month", detail: "Commenced 21st Oct 2026" },
+      { label: "Domain Focus", value: "AI / LLMs", detail: "Enterprise systems integration" },
+      { label: "Architecture", value: "APIs & LLMs", detail: "High-reliability microservices" },
+      { label: "Status", value: "Active", detail: "Production AI integration" }
+    ]
+  },
+  {
     id: "chitralai",
     role: "Software Development Engineer Intern",
     company: "Chitralai",
-    period: "Jul 2026 – Present",
-    location: "Remote",
-    type: "Internship",
+    period: "Jul 2026 – Oct 2026",
+    location: "Remote (T-Hub Phase 2, Hyderabad)",
+    type: "Internship (Completed)",
+    status: "completed",
+    certificateUrl: "/chitralai-experience-certificate.pdf",
+    verification: {
+      date: "15-10-2026",
+      issuer: "Bindu Potti, Co-Founder — Chitralai",
+      location: "T-Hub Phase 2, Madhapur, Hyderabad-500081, Telangana",
+      contact: "+91-89777 25553 | contact@chitralai.in",
+      website: "https://www.chitralai.in",
+      quote: "We found him to be sincere, dedicated, and professional in his work and wish his continued success in future endeavors."
+    },
     technologies: [
       "React 18", "TypeScript", "Node.js", "Express.js", "AWS (EC2, S3, DynamoDB, SQS)", 
       "Redis", "Docker", "Tailwind CSS", "GitHub Actions CI/CD"
@@ -371,7 +426,7 @@ export const WORK_EXPERIENCE: Experience[] = [
       "Frontend Architecture & Landing Page: Architected a high-converting landing page and attendee portal using React 18, TypeScript, and Tailwind CSS; built custom fullscreen media galleries, cutting load times to under 800ms and driving a 25% conversion lift.",
       "Distributed Backend & Media Pipelines: Built high-throughput Node.js/Express services with direct-to-S3 presigned multipart uploads; deployed AWS SQS workers for media transcoding, eliminating server memory starvation during batch ingestions.",
       "Cloud Database & Cache Optimization: Modeled low-latency AWS DynamoDB schemas with Global Secondary Indexes (GSI), cutting query latency by 40%; deployed multi-tier Redis caching to stabilize P95 API latency to sub-65ms.",
-      "Production Reliability & Root-Cause Debugging: Diagnosed and resolved critical bottlenecks across S3 storage quotas, EC2 blue-green container routing, and DynamoDB full scans; enforced 85%+ test coverage in GitHub Actions CI/CD."
+      "Full-Lifecycle Engineering & System Reliability: Contributed to end-to-end feature development, code reviews, testing, debugging, and software maintenance; collaborated with cross-functional engineering teams to troubleshoot technical issues and optimize performance, enforcing 85%+ test coverage in GitHub Actions CI/CD."
     ],
     metrics: [
       { label: "Conversion Lift", value: "+25%", detail: "Optimized React 18 portal & custom media galleries" },
@@ -458,6 +513,26 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export const ACHIEVEMENTS: Achievement[] = [
+  {
+    id: "kanishka-letter",
+    title: "AI Integration Internship Appointment",
+    issuer: "Kanishka Consultancy (Mumbai 400 072)",
+    description: "Appointed as AI Integration Intern (Ref: KC/I/HR/1142, effective 21st Oct 2026). Selected to architect enterprise AI integration pipelines and LLM microservice connectors reporting to Senior Technical Management.",
+    badge: "Active Appointment",
+    icon: "Sparkles",
+    date: "21-10-2026",
+    certificateUrl: "/kanishka-internship-letter.pdf"
+  },
+  {
+    id: "chitralai-cert",
+    title: "Chitralai SDE Internship — Experience Certificate",
+    issuer: "Chitralai (T-Hub Phase 2, Madhapur, Hyderabad)",
+    description: "Official certificate verifying successful completion of SDE Internship (14 Jul 2026 – 14 Oct 2026). Recognized by Co-Founder Bindu Potti for sincere, dedicated, and professional contributions to feature development, debugging, and system performance.",
+    badge: "Verified SDE Certificate",
+    icon: "Award",
+    date: "15-10-2026",
+    certificateUrl: "/chitralai-experience-certificate.pdf"
+  },
   {
     id: "musa-codex",
     title: "MUSA Codex National Hackathon — Top 15 Finalist",
@@ -551,6 +626,8 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "  expense      - Inspect Smart Expense Manager FinTech architecture",
       "  extractor    - Inspect WhatsApp contact extractor automation engine",
       "  experience   - Display professional engineering experience",
+      "  kanishka     - Inspect active AI Integration Internship at Kanishka Consultancy",
+      "  certificate  - View verified Chitralai SDE experience certificate",
       "  metrics      - Display latency, throughput, and system benchmarks",
       "  education    - Display academic background and qualifications",
       "  resume       - View & download official PDF resume document",
@@ -560,13 +637,14 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     ]
   },
   "whoami": {
-    title: "Nikhil Ankush Thange - Full Stack Software Engineer",
+    title: "Nikhil Ankush Thange - Full Stack & AI Systems Engineer",
     output: [
-      "Role: Full Stack Software Engineer",
-      "Specialization: High-Concurrency Microservices | React 19/TS | AI & Computer Vision",
+      "Role: Full Stack & AI Systems Engineer",
+      "Current: AI Integration Intern at Kanishka Consultancy (Oct 2026 – Present, Active)",
+      "Previous: SDE Intern at Chitralai (Jul 2026 – Oct 2026, Completed)",
+      "Specialization: Enterprise AI Pipelines | LLM Integration | High-Concurrency Microservices",
       "Location: Mumbai, MH, India",
       "Key Achievement: Engineered backends sustaining 500+ req/s at sub-50ms P95 latency",
-      "Current: SDE Intern at Chitralai",
       "Education: B.E. in Information Technology (Mumbai University, 2023-2027)"
     ]
   },
@@ -673,13 +751,44 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
     ]
   },
   "experience": {
-    title: "Work Experience",
+    title: "Work Experience Record",
     output: [
-      "Chitralai — Software Development Engineer Intern (Jul 2026 – Present, Remote)",
-      "• Frontend: Built high-converting portal with React 18, TS, and Tailwind CSS; load time <800ms (+25% conversion).",
-      "• Backend: Direct-to-S3 presigned multipart uploads & AWS SQS background media transcoding workers.",
-      "• Database: AWS DynamoDB GSI key modeling (-40% query latency) & multi-tier Redis caching (sub-65ms P95).",
-      "• Reliability: Root-cause debugging on S3 quotas & EC2 port routing; 85%+ test coverage in GitHub Actions CI/CD."
+      "1. Kanishka Consultancy — AI Integration Intern (Oct 2026 – Present, Mumbai • ACTIVE_ROLE)",
+      "   • Enterprise AI pipelines, LLM APIs, prompt engineering, and microservices.",
+      "   • Reporting to Senior Technical Manager Mehul Gondhalekar (Ref: KC/I/HR/1142).",
+      "   • Offer Letter: /kanishka-internship-letter.pdf",
+      "2. Chitralai — Software Development Engineer Intern (Jul 2026 – Oct 2026, Remote • Completed)",
+      "   • High-converting React 18 attendee portal (<800ms load time, +25% conversion).",
+      "   • Direct-to-S3 uploads, AWS SQS workers, and sub-65ms Redis caching.",
+      "   • Verified Experience Certificate: /chitralai-experience-certificate.pdf"
+    ]
+  },
+  "kanishka": {
+    title: "Kanishka Consultancy — AI Integration Intern (Active)",
+    output: [
+      "• Candidate: Nikhil Ankush Thange",
+      "• Role: Intern - AI Integration Intern",
+      "• Company: Kanishka Consultancy (Mumbai 400 072, Maharashtra)",
+      "• Effective Date: 21st October 2026 (Six-Months Internship)",
+      "• Status: ACTIVE_ROLE (Currently Working Here)",
+      "• Reporting: Mehul Gondhalekar - Senior Technical Manager",
+      "• HR Reference: KC/I/HR/1142 (Offer Letter dated 21-10-2026)",
+      "• Focus: Enterprise AI pipelines, LLM systems integration, and backend API connectors",
+      "• Official Document: /kanishka-internship-letter.pdf"
+    ]
+  },
+  "certificate": {
+    title: "Chitralai SDE Experience Certificate (Verified)",
+    output: [
+      "• Candidate: Nikhil Ankush Thange",
+      "• Role: Software Development Engineer (SDE) Intern",
+      "• Company: Chitralai (T-Hub Phase 2, Madhapur, Hyderabad-500081)",
+      "• Duration: 14th July 2026 to 14th October 2026 (Tenure Completed)",
+      "• Certification Date: 15-10-2026",
+      "• Signatory: Bindu Potti, Co-Founder - Chitralai",
+      "• Verification Citation: Feature development, code reviews, testing, debugging, and system performance optimization",
+      "• Official Endorsement: 'Sincere, dedicated, and professional in his work'",
+      "• Official PDF Document: /chitralai-experience-certificate.pdf"
     ]
   },
   "metrics": {

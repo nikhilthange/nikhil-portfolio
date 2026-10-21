@@ -58,12 +58,19 @@ TECHNICAL SKILLS
 - AI & Machine Learning: PyTorch, YOLOv8, Computer Vision, LLM Integration (NVIDIA NIM)
 
 WORK EXPERIENCE
-Software Development Engineer Intern — Chitralai (Jul 2026 – Present | Remote)
+AI Integration Intern — Kanishka Consultancy (Oct 2026 – Present | Mumbai, India • Active Role)
+Kanishka Consultancy | Python, Node.js, TypeScript, LLM Integration, REST APIs, Docker, Prompt Engineering
+- Enterprise AI Integration Pipelines: Designing and deploying resilient AI integration pipelines connecting core client workflows with state-of-the-art LLMs and proprietary data sources.
+- Backend Connectors & API Middleware: Architecting Node.js and Python microservices to orchestrate real-time model queries, serialize structured outputs, and interface with enterprise backends.
+- Prompt Optimization & Guardrails: Engineering dynamic few-shot prompt templates and schema validators to minimize latency, prevent token bloat, and eliminate hallucinations in production.
+- Cross-Functional Systems Collaboration: Reporting to Senior Technical Management (Mehul Gondhalekar) to troubleshoot integration bottlenecks, optimize throughput, and ensure strict compliance.
+
+Software Development Engineer Intern — Chitralai (Jul 2026 – Oct 2026 | Remote • Completed)
 Chitralai | React 18, TypeScript, Node.js, Express, AWS (EC2, S3, DynamoDB, SQS), Redis, Docker
 - Frontend Architecture & Landing Page: Architected a high-converting landing page and attendee portal using React 18, TypeScript, and Tailwind CSS; built custom fullscreen media galleries, cutting load times to under 800ms and driving a 25% conversion lift.
 - Distributed Backend & Media Pipelines: Built high-throughput Node.js/Express services with direct-to-S3 presigned multipart uploads; deployed AWS SQS workers for media transcoding, eliminating server memory starvation during batch ingestions.
 - Cloud Database & Cache Optimization: Modeled low-latency AWS DynamoDB schemas with Global Secondary Indexes (GSI), cutting query latency by 40%; deployed multi-tier Redis caching to stabilize P95 API latency to sub-65ms.
-- Production Reliability & Root-Cause Debugging: Diagnosed and resolved critical bottlenecks across S3 storage quotas, EC2 blue-green container routing, and DynamoDB full scans; enforced 85%+ test coverage in GitHub Actions CI/CD.
+- Full-Lifecycle Engineering & System Reliability: Contributed to end-to-end feature development, code reviews, testing, debugging, and software maintenance; collaborated with cross-functional teams to resolve technical issues and enforce 85%+ test coverage in GitHub Actions CI/CD.
 
 FLAGSHIP ENGINEERING PROJECTS
 1. BMC Smart Civic Operating System (CityOS)
@@ -91,6 +98,8 @@ Bachelor of Engineering in Information Technology — Mumbai University (2023 �
 - Coursework: Data Structures & Algorithms, DBMS, Operating Systems, Computer Networks, System Design
 
 HONORS & CERTIFICATIONS
+- Kanishka Consultancy AI Integration Internship Appointment (Oct 2026): Selected to engineer enterprise AI integration pipelines and LLM systems (Ref: KC/I/HR/1142).
+- Chitralai SDE Internship Experience Certificate (Oct 2026): Verified by Co-Founder Bindu Potti for sincere, dedicated, and professional contributions to feature engineering and system performance.
 - MUSA Codex National Hackathon: Top 15 Finalist (2026) – Built SwasthyaSetu offline emergency triage platform.
 - IBM Full Stack Software Developer Certification: Microservices, Cloud Architecture, and RESTful APIs.
 - Data Structures & Algorithms: Solved 250+ coding challenges across LeetCode and GeeksforGeeks.
@@ -189,10 +198,10 @@ HONORS & CERTIFICATIONS
             </span>
             <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px]">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              STATUS: READY TO DEPLOY
+              STATUS: CURRENTLY EMPLOYED (ACTIVE)
             </span>
             <span className="text-slate-400 text-[11px] hidden md:inline">
-              Target: Full Stack Engineer / Backend SDE / AI Systems
+              Role: AI Integration Intern @ Kanishka Consultancy | Open to 2027 Opportunities
             </span>
           </div>
 
@@ -209,12 +218,12 @@ HONORS & CERTIFICATIONS
         {/* Highlighted Micro-Telemetry */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1 text-[11px]">
           <div className="p-2 bg-black/60 border border-white/10">
-            <span className="text-slate-400 block text-[10px]">NOTICE PERIOD:</span>
-            <span className="text-white font-medium">Immediate</span>
+            <span className="text-slate-400 block text-[10px]">CURRENT ROLE:</span>
+            <span className="text-white font-medium truncate block">AI Integration Intern</span>
           </div>
           <div className="p-2 bg-black/60 border border-white/10">
             <span className="text-slate-400 block text-[10px]">LOCATION:</span>
-            <span className="text-white font-medium">Mumbai (Remote / Relocate)</span>
+            <span className="text-white font-medium">Mumbai, India</span>
           </div>
           <div className="p-2 bg-black/60 border border-white/10">
             <span className="text-slate-400 block text-[10px]">SYSTEM CONCURRENCY:</span>

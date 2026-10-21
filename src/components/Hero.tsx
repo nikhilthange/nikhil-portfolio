@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResumeModal })
 
           <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-mono uppercase">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-            <span>AVAILABLE IMMEDIATELY: SDE INTERN & FULL-TIME (2026–2027)</span>
+            <span>CURRENTLY: AI INTEGRATION INTERN @ KANISHKA CONSULTANCY</span>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResumeModal })
           </h1>
 
           <div className="text-[11px] xs:text-xs sm:text-sm md:text-base font-space tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.35em] text-[#8BE9FD] uppercase font-light leading-relaxed">
-            FULL STACK SOFTWARE ENGINEER // DISTRIBUTED SYSTEMS & AI PIPELINES
+            FULL STACK & AI SYSTEMS ENGINEER // DISTRIBUTED SYSTEMS & AI PIPELINES
           </div>
         </div>
 
@@ -89,7 +89,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResumeModal })
           <span className="text-[#00D9FF]">RECRUITER_QUICKVIEW:</span>
           <span className="px-2 py-0.5 bg-black/70 border border-white/10 text-slate-300">Mumbai, India (Open to Remote / Relocation)</span>
           <span className="px-2 py-0.5 bg-black/70 border border-white/10 text-slate-300">B.E. IT (Mumbai Univ, 2027) • 7.50 CGPA</span>
-          <span className="px-2 py-0.5 bg-black/70 border border-emerald-500/30 text-emerald-400">Notice: Immediate</span>
+          <span className="px-2 py-0.5 bg-black/70 border border-emerald-500/30 text-emerald-400">Current: AI Integration Intern @ Kanishka Consultancy</span>
         </div>
 
         {/* Action Buttons */}
