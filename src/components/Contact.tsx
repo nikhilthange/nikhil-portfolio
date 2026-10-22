@@ -51,11 +51,14 @@ export const Contact: React.FC = () => {
           email: formData.email,
           message: formData.message,
           _subject: `[Portfolio Recruiter Inquiry] from ${formData.name}`,
-          _template: 'table'
+          _template: 'table',
+          _captcha: 'false'
         })
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data && (data.success === 'true' || data.success === true)) {
         setSubmitStatus('success');
         confetti({
           particleCount: 90,
@@ -64,11 +67,17 @@ export const Contact: React.FC = () => {
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
-        throw new Error('Dispatch failed');
+        const detail = data?.message || 'Dispatch transmission failed.';
+        throw new Error(detail);
       }
-    } catch {
+    } catch (err: unknown) {
       setSubmitStatus('error');
-      setErrorMessage('Network transmission blocked. Use direct email client fallback below.');
+      const errStr = err instanceof Error ? err.message : 'Network transmission blocked.';
+      if (errStr.toLowerCase().includes('activation')) {
+        setErrorMessage("FormSubmit requires one-time activation! Check your Gmail (nikhilthange75@gmail.com - including Spam folder) and click 'Activate Form'.");
+      } else {
+        setErrorMessage(errStr || 'Network transmission blocked. Use direct email client fallback below.');
+      }
     } finally {
       setIsSubmitting(false);
     }
