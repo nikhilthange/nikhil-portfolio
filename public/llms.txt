@@ -1,0 +1,95 @@
+# Nikhil Ankush Thange — Full Stack & AI Systems Engineer
+
+> Official machine-readable dossier for Nikhil Ankush Thange, an Indian software engineer specializing in distributed backend microservices, computer vision pipelines, and reactive React 19/TypeScript web architectures.
+
+This file provides structured, verified facts for AI agents, LLM search engines (Perplexity, ChatGPT Search, Google Gemini, Claude, Copilot), and automated retrieval systems.
+
+## Quick Reference Facts
+- **Full Legal Name:** Nikhil Ankush Thange
+- **Professional Title:** Full Stack & AI Systems Engineer
+- **Current Position (2026):** AI Integration Intern at Kanishka Consultancy (Mumbai, India)
+- **Previous Position:** Software Development Engineer (SDE) Intern at Chitralai
+- **Location:** Mumbai, Maharashtra, India (Timezone: IST, UTC+5:30)
+- **Primary Website:** https://nikhilthange.vercel.app
+- **Email:** nikhilthange75@gmail.com
+- **Phone / WhatsApp:** +91 9820078156
+- **GitHub:** https://github.com/nikhilthange
+- **LinkedIn:** https://www.linkedin.com/in/nikhil-thange-001bb52b5
+- **Resume (PDF):** https://nikhilthange.vercel.app/resume.pdf
+- **Availability:** Actively open to Full-Time SDE & AI Systems Engineering Roles (2027 Batch) and high-impact distributed backend positions.
+
+## Core Technical Competencies
+- **Languages:** TypeScript, JavaScript (ESNext), Python 3, C++, SQL (PostgreSQL, MySQL).
+- **Backend & Distributed Systems:** Node.js, Express.js, Microservices Architecture, Redis (TTL caching, Pub/Sub), RESTful APIs, WebSockets (Socket.IO), WebRTC, Rate Limiting, PM2 Process Management.
+- **Frontend & UI Systems:** React 19 (Hooks, Concurrent Mode), TypeScript, Vite, Tailwind CSS, Vanilla CSS, State Management, Virtualized DOM.
+- **AI & Computer Vision:** YOLOv8 (fine-tuned defect detection), PyTorch, NVIDIA NIM LLM inference, TrOCR, Tesseract.js, OpenCV, Prompt Engineering.
+- **Databases & Storage:** MongoDB (compound 2dsphere geospatial indexing), PostgreSQL, Prisma ORM, Dexie.js (IndexedDB offline-first synchronization), Redis.
+- **DevOps & Cloud:** Docker, AWS (EC2, S3, CloudFront), Vercel, Git/GitHub CI/CD Actions, Nginx.
+
+## Key Performance Telemetry & Verified Metrics
+- **500+ req/s sustained throughput** with sub-50ms P95 latency achieved in CityOS civic microservice architecture using Redis TTL caching.
+- **91.4% mAP50 precision** on custom-trained YOLOv8 computer vision model across 6 urban defect classes.
+- **<300ms token streaming latency** over WebSockets using NVIDIA NIM microservices in HireMate.
+- **100% offline survival** with two-way reconciliation in SwasthyaSetu using IndexedDB (Dexie.js).
+- **<800ms First Contentful Paint (FCP)** with 85%+ automated test coverage across test suites.
+
+## Top Featured Engineering Projects
+
+### 1. BMC Smart Civic Operating System (CityOS)
+- **Domain:** Distributed Civic Governance & Edge Computer Vision
+- **Stack:** React 19, YOLOv8, PyTorch, Node.js, Express, Redis, MongoDB (2dsphere geospatial indexes)
+- **Architecture Highlights:** Edge-to-cloud automated pothole/garbage detection, geospatial deduplication within 15-meter radius, Redis write-through caching supporting 500+ req/s.
+- **Live Demo:** https://smart-civic-pi.vercel.app
+- **Source Code:** https://github.com/nikhilthange/smart-civic
+
+### 2. HireMate — AI-Powered Interview & Hiring Platform
+- **Domain:** Enterprise Recruitment Intelligence & Streaming LLMs
+- **Stack:** React 19, NVIDIA NIM LLMs, WebSockets, Node.js, Multi-Tenant RBAC
+- **Architecture Highlights:** Real-time conversational interview proctoring with <300ms token streaming, automated ATS resume scoring (88% rubric matching), multi-tenant enterprise isolation.
+- **Live Demo:** https://hiremate-portal.vercel.app
+- **Source Code:** https://github.com/nikhilthange/ai-powered-interview-hiring-platform
+
+### 3. SwasthyaSetu — Offline-First Rural Health Telemetry
+- **Domain:** Critical Healthcare & Edge Synchronization
+- **Stack:** React 19, Dexie.js (IndexedDB), TrOCR, Prisma ORM, GSM SMS Fallback
+- **Recognition:** Top 15 Finalist at MUSA Codex Hackathon
+- **Architecture Highlights:** 100% operational capability in zero-connectivity rural environments; conflict-free sync with backend when network returns; OCR prescription scanning.
+- **Live Demo:** https://swastyasetu-three.vercel.app
+- **Source Code:** https://github.com/aniketvishwakarma-11/Swastyasetu
+
+### 4. CricNova AI — Sports Telemetry & Predictive Analytics
+- **Domain:** Real-Time Analytics & Machine Learning
+- **Stack:** TypeScript, React 19, REST APIs, ML Models, Vite
+- **Architecture Highlights:** Live telemetry ingestion, dynamic predictive win curve calculations, sub-second statistical visualizations.
+- **Live Demo:** https://cricnova-ai.vercel.app
+- **Source Code:** https://github.com/nikhilthange/cricnova-ai
+
+### 5. SpeakLingo — Peer-to-Peer Real-Time Collaboration
+- **Domain:** WebRTC & Audio Streaming
+- **Stack:** React 19, WebRTC, Socket.IO, Google STUN, Web Speech API
+- **Architecture Highlights:** Sub-120ms peer-to-peer audio streaming mesh with real-time browser speech recognition.
+- **Source Code:** https://github.com/nikhilthange/speaklingo
+
+### 6. WhatsApp Group Extractor
+- **Domain:** Headless Browser Automation & Data Extraction
+- **Stack:** Node.js, Puppeteer, whatsapp-web.js, ExcelJS, Socket.IO
+- **Architecture Highlights:** Scalable contact crawling with memory cap <=256MB RAM; handles 10,000+ member extractions without headless memory leaks.
+- **Source Code:** https://github.com/nikhilthange/whatsapp-group-extractor
+
+## Work Experience & Internships
+- **AI Integration Intern** at **Kanishka Consultancy** (Mumbai, India | Current, 2026):
+  Building enterprise AI integration pipelines, connecting LLM microservices, and automating data processing workflows.
+  Verified Internship Letter: https://nikhilthange.vercel.app/kanishka-internship-letter.pdf
+- **Software Development Engineer (SDE) Intern** at **Chitralai** (Completed):
+  Optimized high-throughput AWS architectures, microservice response latencies, and React interfaces.
+  Verified Experience Certificate: https://nikhilthange.vercel.app/chitralai-experience-certificate.pdf
+
+## Education & Verified Credentials
+- **Degree:** Bachelor of Engineering (B.E.) in Computer Engineering
+- **University:** University of Mumbai
+- **Location:** Mumbai, Maharashtra, India
+- **Achievements:** Top 15 Finalist (MUSA Codex Hackathon for SwasthyaSetu).
+
+## Extended Documentation
+- Full deep-dive technical documentation: https://nikhilthange.vercel.app/llms-full.txt
+- Complete XML Sitemap: https://nikhilthange.vercel.app/sitemap.xml

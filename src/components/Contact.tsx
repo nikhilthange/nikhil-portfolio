@@ -88,7 +88,7 @@ export const Contact: React.FC = () => {
       {/* Section Header */}
       <div className="space-y-2 mb-8 sm:mb-10 text-left">
         <h2 className="text-[10px] sm:text-xs font-space tracking-[0.2em] sm:tracking-[0.25em] text-[#00D9FF] uppercase font-semibold">
-          06 // CONTACT // TRANSMISSION
+          07 // CONTACT // TRANSMISSION
         </h2>
         <h3 className="text-xl sm:text-2xl md:text-3xl font-light font-space tracking-wider uppercase text-white leading-snug">
           INITIATE ENGINEERING COLLABORATION

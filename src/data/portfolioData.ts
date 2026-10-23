@@ -70,6 +70,17 @@ export interface Education {
   highlights?: string[];
 }
 
+export interface FAQItem {
+  id: string;
+  category: 'Backend & Systems' | 'AI & Vision' | 'Offline-First' | 'Availability & Roles';
+  question: string;
+  shortAnswer: string;
+  detailedPoints: string[];
+  metrics?: { label: string; value: string }[];
+  actionLink?: { label: string; href: string; isExternal?: boolean };
+  keywords: string[];
+}
+
 export const PERSONAL_INFO = {
   name: "Nikhil Ankush Thange",
   role: "Full Stack & AI Systems Engineer",
@@ -631,6 +642,8 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "  metrics      - Display latency, throughput, and system benchmarks",
       "  education    - Display academic background and qualifications",
       "  resume       - View & download official PDF resume document",
+      "  faq          - Inspect Answer Engine Optimization (AEO) Q&A knowledge base",
+      "  llms         - Inspect Generative Engine Optimization (GEO) /llms.txt manifest",
       "  contact      - Display direct email, phone, and social handles",
       "  clear        - Clear the terminal console screen",
       "  hire         - Instant recruiter priority dispatch protocol",
@@ -846,5 +859,182 @@ export const CLI_COMMANDS: Record<string, string | { title: string; output: stri
       "Target Roles: Full Stack Engineer, Backend Engineer, Frontend Engineer (React 19), AI Systems SDE",
       "Action: Email nikhilthange75@gmail.com or WhatsApp (+91 9820078156) with subject '[Interview Request] Opportunity for Nikhil Thange'"
     ]
+  },
+  "faq": {
+    title: "Answer Engine Optimization (AEO) Knowledge Matrix",
+    output: [
+      "• Q1: Who is Nikhil Thange? Full Stack & AI Systems Engineer in Mumbai, AI Integration Intern @ Kanishka Consultancy.",
+      "• Q2: What is his core stack? React 19, TypeScript, Node.js, Express, YOLOv8, PyTorch, Redis, MongoDB 2dsphere, Docker.",
+      "• Q3: What high-throughput backends has he built? CityOS microservices (500+ req/s, sub-50ms P95 latency).",
+      "• Q4: What AI/CV models has he deployed? YOLOv8 custom defect triage (91.4% mAP50), NVIDIA NIM streaming (<300ms).",
+      "• Q5: What is his offline architecture experience? SwasthyaSetu EHR (Dexie.js IndexedDB, MUSA Codex Top 15 Finalist).",
+      "• Direct AEO Section: Jump to /#faq on the webpage for full interactive Q&A matrix."
+    ]
+  },
+  "llms": {
+    title: "Generative Engine Optimization (GEO) Protocol",
+    output: [
+      "• Specification: Standardized llms.txt protocol for AI crawlers (Perplexity, ChatGPT, Claude, Gemini)",
+      "• Executive Summary File: https://nikhilthange.vercel.app/llms.txt",
+      "• Comprehensive Technical Docs: https://nikhilthange.vercel.app/llms-full.txt",
+      "• XML Sitemap: https://nikhilthange.vercel.app/sitemap.xml",
+      "• Schema.org: Linked Data Graph (Person, WebSite, ProfilePage, SoftwareApplication, FAQPage)"
+    ]
   }
 };
+
+export const FAQ_ITEMS: FAQItem[] = [
+  {
+    id: "specialization-overview",
+    category: "Backend & Systems",
+    question: "What core systems and technologies do you specialize in?",
+    shortAnswer: "I specialize in high-concurrency Node.js/TypeScript backend microservices, real-time computer vision inference (YOLOv8 & PyTorch), and reactive web architectures built with React 19. My day-to-day focus is on sub-50ms P95 latency, Redis caching topologies, and resilient offline-first data synchronization.",
+    detailedPoints: [
+      "Distributed Backend: Node.js, Express, PM2 cluster modes, Redis Pub/Sub, TTL caching, Docker, and REST/WebSocket APIs.",
+      "Computer Vision & AI: Fine-tuned YOLOv8 on PyTorch, Laplacian edge triage, NVIDIA NIM LLM microservices, and TrOCR.",
+      "Frontend Architecture: React 19 concurrent features, TypeScript strict mode, Vite, Tailwind CSS, and Dexie.js (IndexedDB).",
+      "Databases: MongoDB compound 2dsphere indexing, PostgreSQL, Prisma ORM, and Redis in-memory storage."
+    ],
+    metrics: [
+      { label: "P95 Latency", value: "<50ms" },
+      { label: "Vision mAP50", value: "91.4%" },
+      { label: "Streaming", value: "<300ms" }
+    ],
+    actionLink: { label: "Explore Production Projects", href: "#projects" },
+    keywords: ["Backend Systems", "React 19", "Node.js", "Redis", "YOLOv8", "TypeScript", "Microservices"]
+  },
+  {
+    id: "backend-throughput-scaling",
+    category: "Backend & Systems",
+    question: "How do you scale backends to sustain 500+ requests/sec at sub-50ms latency?",
+    shortAnswer: "In the CityOS municipal platform, I scaled Node.js using PM2 multi-process clustering, an in-memory Redis write-through cache layer, and compound MongoDB 2dsphere indexing. This decoupled read loads from disk, slashed database roundtrips by over 70%, and sustained 500+ ops/sec with consistent sub-50ms P95 latency.",
+    detailedPoints: [
+      "Cluster Concurrency: Node.js worker process clustering pinned to system CPU cores via PM2.",
+      "Redis In-Memory Tier: Dynamic TTL caching for hot municipal query endpoints and session validation.",
+      "Geospatial Indexing: Compound 2dsphere indexing with Turf.js algorithms for instantaneous 15–35m radius ticket clustering.",
+      "Defensive Engineering: Token bucket rate limiting, automated Supertest regression suites, and isolated connection pools."
+    ],
+    metrics: [
+      { label: "Throughput", value: "500+ req/s" },
+      { label: "P95 Latency", value: "sub-50ms" },
+      { label: "Cache Hit Rate", value: ">70%" }
+    ],
+    actionLink: { label: "Inspect CityOS Repository", href: "https://github.com/nikhilthange/smart-civic", isExternal: true },
+    keywords: ["High Concurrency", "Redis", "PM2 Clustering", "MongoDB 2dsphere", "Sub-50ms Latency"]
+  },
+  {
+    id: "computer-vision-yolo",
+    category: "AI & Vision",
+    question: "How did you build and fine-tune the custom YOLOv8 computer vision model?",
+    shortAnswer: "I fine-tuned a YOLOv8 model using PyTorch and CUDA acceleration on a curated dataset of urban municipal defects across 6 classes (potholes, garbage piles, broken streetlights, waterlogging, debris, and pavement cracks), achieving 91.4% mAP50. I also built a client-side Laplacian blur filter to reject illegible camera uploads directly on the user's device.",
+    detailedPoints: [
+      "Model Training: Fine-tuned YOLOv8 architecture on PyTorch with data augmentation (mosaic, affine transforms, HSV shifts).",
+      "Evaluation Metrics: Achieved 91.4% mAP50 across all 6 defect classes with high recall on severe road hazards.",
+      "Client-Side Edge Triage: In-browser Laplacian variance filter to discard blurred or unusable photos before upload.",
+      "Pipeline Optimization: Canvas API compression pipeline achieving a 95% payload reduction before inference transmission."
+    ],
+    metrics: [
+      { label: "YOLOv8 Precision", value: "91.4% mAP50" },
+      { label: "Defect Classes", value: "6 Hazard Types" },
+      { label: "Payload Cut", value: "95%" }
+    ],
+    actionLink: { label: "Try Live CityOS Demo", href: "https://smart-civic-pi.vercel.app", isExternal: true },
+    keywords: ["YOLOv8", "Computer Vision", "PyTorch", "Laplacian Blur", "Edge Triage", "Image Compression"]
+  },
+  {
+    id: "offline-first-architecture",
+    category: "Offline-First",
+    question: "How does SwasthyaSetu maintain 100% offline functionality in zero-connectivity areas?",
+    shortAnswer: "SwasthyaSetu runs on an offline-first architecture using Dexie.js over browser IndexedDB with optimistic UI state updates. Rural healthcare workers can capture patient vitals, clinical histories, and triage reports completely offline. When network connectivity returns, an idempotent reconciliation queue replays mutations against PostgreSQL via Prisma ORM.",
+    detailedPoints: [
+      "IndexedDB Local Store: Zero-latency reads and writes on-device via Dexie.js with persistent client-side encryption.",
+      "Conflict-Free Reconnection: Two-way sync engine matching optimistic event IDs against server PostgreSQL schemas.",
+      "Prescription Digitization: TrOCR vision transformer transcribes cursive handwritten medical prescriptions.",
+      "Emergency SMS Fallback: Compact ≤160-character GSM SMS transport payloads when mobile cellular data is unavailable."
+    ],
+    metrics: [
+      { label: "Offline Survival", value: "100%" },
+      { label: "Sync Accuracy", value: "0% Data Loss" },
+      { label: "Award", value: "MUSA Codex Top 15" }
+    ],
+    actionLink: { label: "Inspect SwasthyaSetu Source", href: "https://github.com/aniketvishwakarma-11/Swastyasetu", isExternal: true },
+    keywords: ["Offline-First", "Dexie.js", "IndexedDB", "Healthcare Tech", "Prisma", "TrOCR"]
+  },
+  {
+    id: "current-role-hiring",
+    category: "Availability & Roles",
+    question: "What is your current role and availability for new engineering positions?",
+    shortAnswer: "I am currently working as an AI Integration Intern at Kanishka Consultancy (Mumbai), where I develop enterprise LLM integration pipelines and microservice connectors. I am in the 2027 graduating batch (B.E. Information Technology, Mumbai University) and actively looking for full-time Software Engineer (SDE 1), Backend Engineer, and AI Systems roles.",
+    detailedPoints: [
+      "Current Role: AI Integration Intern at Kanishka Consultancy (Reporting to Senior Technical Manager Mehul Gondhalekar).",
+      "Previous Experience: SDE Intern at Chitralai (optimized AWS microservices and React attendee workflows).",
+      "Target Opportunities: Full-time SDE roles, Backend Software Engineer, AI Systems SDE, and extended high-impact internships.",
+      "Verified Paperwork: Documented offer letter (Ref: KC/I/HR/1142) and Chitralai experience certificate available in the dossier."
+    ],
+    metrics: [
+      { label: "Graduation", value: "2027 Batch" },
+      { label: "Current Role", value: "AI Integration Intern" },
+      { label: "Status", value: "Open for Hiring" }
+    ],
+    actionLink: { label: "Download Official Resume", href: "/resume.pdf", isExternal: true },
+    keywords: ["Kanishka Consultancy", "Chitralai", "SDE 1", "Backend Engineer", "AI Systems", "Hiring"]
+  },
+  {
+    id: "work-location-remote",
+    category: "Availability & Roles",
+    question: "Where are you located, and are you open to remote or relocated work?",
+    shortAnswer: "I am based in Mumbai, Maharashtra, India (IST, UTC+5:30). I am open to on-site roles in Mumbai, Pune, and Bangalore, as well as global remote engineering roles. My developer setup is configured for asynchronous collaboration, disciplined Git workflows, and overlap hours with international teams.",
+    detailedPoints: [
+      "Location: Mumbai, India (IST timezone, UTC+5:30).",
+      "On-Site & Relocation: Open to on-site engineering roles in Mumbai, Bangalore, Pune, Hyderabad, and Gurgaon.",
+      "Remote Ready: High-speed fiber network, dedicated multi-monitor development workstation, and async communication discipline.",
+      "Timezone Flexibility: Comfortable scheduling overlap hours for US, UK, European, and APAC engineering teams."
+    ],
+    metrics: [
+      { label: "Location", value: "Mumbai, India" },
+      { label: "Timezone", value: "UTC+5:30 (IST)" },
+      { label: "Work Model", value: "On-Site / Remote" }
+    ],
+    actionLink: { label: "Connect on WhatsApp", href: "https://wa.me/919820078156", isExternal: true },
+    keywords: ["Mumbai", "Remote Work", "Relocation", "IST Timezone", "On-Site"]
+  },
+  {
+    id: "testing-code-quality",
+    category: "Backend & Systems",
+    question: "How do you test and ensure fault tolerance in production systems?",
+    shortAnswer: "I practice test-driven patterns with 85%+ coverage across unit and integration suites using Jest, Vitest, and Supertest. Every build enforces strict TypeScript types (tsc -b), automated linting with Oxlint, error boundaries, rate limiters, and structured logging to ensure zero runtime surprises in production.",
+    detailedPoints: [
+      "Type Safety: Strict TypeScript compile flags with zero unchecked 'any' types.",
+      "API Integration Testing: Supertest assertions covering edge cases, authentication failures, and payload boundaries.",
+      "Performance Profiling: Continuous monitoring of P95/P99 latencies, database slow queries, and memory footprints.",
+      "Resilient Failure Modes: Graceful fallbacks (e.g. mailto fallback on forms, IndexedDB queue on network loss)."
+    ],
+    metrics: [
+      { label: "Test Coverage", value: "85%+" },
+      { label: "Linter Errors", value: "0" },
+      { label: "Compiler", value: "tsc -b Strict" }
+    ],
+    actionLink: { label: "View Technical Dossier", href: "/llms-full.txt", isExternal: true },
+    keywords: ["Testing", "Jest", "Vitest", "Supertest", "TypeScript Strict", "Oxlint"]
+  },
+  {
+    id: "contact-interview-process",
+    category: "Availability & Roles",
+    question: "What is the fastest way to get in touch or request an interview?",
+    shortAnswer: "The fastest way to reach me is by email at nikhilthange75@gmail.com (I reply within 24 hours) or via WhatsApp at +91 9820078156. You can also connect with me on LinkedIn or dispatch an inquiry directly using the contact console below.",
+    detailedPoints: [
+      "Direct Email: nikhilthange75@gmail.com (Priority response for engineering opportunities).",
+      "Direct Phone / WhatsApp: +91 9820078156 (Available for voice screening and chat).",
+      "LinkedIn Network: linkedin.com/in/nikhil-thange-001bb52b5",
+      "Interactive Terminal: Press 'Ctrl + K' or '~' anywhere on this portfolio to explore CLI commands."
+    ],
+    metrics: [
+      { label: "Email Response", value: "<24 Hours" },
+      { label: "WhatsApp", value: "Available" },
+      { label: "Resume", value: "Instant PDF" }
+    ],
+    actionLink: { label: "Transmit Message to Nikhil", href: "#contact" },
+    keywords: ["Contact", "Email", "Phone", "WhatsApp", "LinkedIn", "Hire Nikhil"]
+  }
+];
+

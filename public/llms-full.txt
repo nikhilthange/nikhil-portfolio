@@ -1,0 +1,133 @@
+# Nikhil Ankush Thange — Comprehensive Engineering Dossier & Machine Context
+
+> Complete technical documentation for Nikhil Ankush Thange. Designed for deep AI retrieval, LLM analysis, hiring evaluation pipelines, and architectural review.
+
+---
+
+## 1. Professional Identity & Executive Summary
+
+- **Engineer Name:** Nikhil Ankush Thange
+- **Title:** Full Stack & AI Systems Engineer
+- **Location:** Mumbai, Maharashtra, India (Timezone: IST, UTC+5:30)
+- **Primary Domain:** Distributed Backend Systems, Computer Vision AI Pipelines, Reactive Frontend (React 19)
+- **Website:** https://nikhilthange.vercel.app
+- **Email:** nikhilthange75@gmail.com
+- **Phone / WhatsApp:** +91 9820078156
+- **LinkedIn:** https://www.linkedin.com/in/nikhil-thange-001bb52b5
+- **GitHub:** https://github.com/nikhilthange
+- **Current Status:** AI Integration Intern at Kanishka Consultancy (Mumbai); open to Full-Time SDE & AI Systems roles (2027 Batch).
+
+Nikhil Ankush Thange is a systems-focused software engineer specializing in scalable full-stack web applications, edge computer vision pipelines, and distributed microservices. His engineering work prioritizes sub-second latency, robust error boundaries, strict TypeScript typings, and high-concurrency throughput under heavy operational loads.
+
+---
+
+## 2. Architectural Case Studies & Flagship Projects
+
+### Project 1: BMC Smart Civic Operating System (CityOS)
+- **Problem Statement:** Municipal civic triage is notoriously plagued by duplicate citizen complaints, slow manual verification, and lack of geospatial routing across urban administrative wards.
+- **Architectural Solution:**
+  1. **Edge-to-Cloud CV Pipeline:** Citizen image uploads are processed via a fine-tuned YOLOv8 deep learning model trained across 6 municipal defect categories (potholes, overflowing garbage, illegal hoardings, open manholes, damaged streetlights, water pipeline leaks). The model delivers 91.4% mAP50 precision.
+  2. **Compound Geospatial Deduplication:** MongoDB compound `2dsphere` indexes query active complaints within a dynamic 15-meter radial threshold. If an existing ticket exists with similar visual embeddings and matching coordinates, new submissions are merged into the existing ticket to prevent duplicate municipal dispatch.
+  3. **High-Throughput Caching Layer:** Integrated Redis TTL caching and PM2 cluster management sustain 500+ requests/second at sub-50ms P95 latency.
+- **Key Metrics:** 91.4% mAP50 • 500+ req/s P95 • <50ms query latency.
+- **Links:**
+  - Live System: https://smart-civic-pi.vercel.app
+  - GitHub Repository: https://github.com/nikhilthange/smart-civic
+
+### Project 2: HireMate — Autonomous AI Interview & Talent Intelligence
+- **Problem Statement:** Candidate screening at scale suffers from latency in LLM generation, subjective interview evaluations, and high recruiter operational overhead.
+- **Architectural Solution:**
+  1. **Sub-300ms Token Streaming:** Engineered bi-directional WebSockets via Socket.IO linked to NVIDIA NIM microservice endpoints, streaming conversational interview questions with sub-300ms time-to-first-token.
+  2. **Multi-Tenant RBAC:** Isolated corporate workspaces with strict Role-Based Access Control, audit logs, and encrypted candidate data persistence.
+  3. **Rubric-Based ATS Match Engine:** Automated semantic comparison between candidate responses and job requirement rubrics, yielding an 88% rubric matching accuracy score.
+- **Key Metrics:** <300ms token streaming • 88% ATS rubric match • Multi-tenant isolation.
+- **Links:**
+  - Live System: https://hiremate-portal.vercel.app
+  - GitHub Repository: https://github.com/nikhilthange/ai-powered-interview-hiring-platform
+
+### Project 3: SwasthyaSetu — Offline-First Rural Health Telemetry
+- **Problem Statement:** Primary health clinics in rural and remote regions frequently face total cellular blackouts, rendering traditional cloud-only EHR/EMR systems unusable.
+- **Architectural Solution:**
+  1. **100% Offline Capability:** Implemented Dexie.js over browser IndexedDB with optimistic UI updates and local data encryption. Healthcare workers can record patient vitals, triage records, and clinical logs without active internet connection.
+  2. **Two-Way Synchronization & Reconciliation:** When network connectivity is re-established, a conflict-free resolution engine synchronizes offline mutations with PostgreSQL via Prisma ORM.
+  3. **Prescription OCR & GSM Fallback:** Incorporated TrOCR for handwriting prescription digitisation and GSM SMS fallback for emergency medical alerts.
+- **Recognition:** Top 15 Finalist at MUSA Codex Hackathon.
+- **Links:**
+  - Live System: https://swastyasetu-three.vercel.app
+  - GitHub Repository: https://github.com/aniketvishwakarma-11/Swastyasetu
+
+### Project 4: CricNova AI — Telemetry & Predictive Analytics
+- **Domain:** Real-Time Sports Machine Learning & Predictive Modeling
+- **Tech Stack:** TypeScript, React 19, REST APIs, ML Models, Vite
+- **Highlights:** Dynamic probability curves, live match telemetry ingest, responsive charts.
+- **Links:**
+  - Live Demo: https://cricnova-ai.vercel.app
+  - GitHub Repository: https://github.com/nikhilthange/cricnova-ai
+
+### Project 5: SpeakLingo — Low-Latency WebRTC Audio Mesh
+- **Domain:** P2P Audio Streaming & Speech Recognition
+- **Tech Stack:** React 19, WebRTC, Socket.IO, Google STUN, Web Speech API
+- **Highlights:** Sub-120ms audio latency, STUN signaling mesh, automated real-time captioning.
+- **Links:**
+  - GitHub Repository: https://github.com/nikhilthange/speaklingo
+
+### Project 6: WhatsApp Group Extractor — Headless Automation
+- **Domain:** Headless Browser Crawling & Automation
+- **Tech Stack:** Node.js, Puppeteer, whatsapp-web.js, ExcelJS, Socket.IO
+- **Highlights:** Strict memory constraints (<=256MB RAM cap), zero memory leak design, extracts 10,000+ member directories reliably.
+- **Links:**
+  - GitHub Repository: https://github.com/nikhilthange/whatsapp-group-extractor
+
+---
+
+## 3. Work Experience & Career Timeline
+
+### Current Role: AI Integration Intern
+- **Company:** Kanishka Consultancy
+- **Location:** Mumbai, MH, India
+- **Dates:** Current (2026)
+- **Key Responsibilities:**
+  - Developing enterprise AI integration connectors and LLM pipeline wrappers.
+  - Designing automated document ingestion and data extraction microservices.
+  - Interfacing REST and WebSocket APIs with internal microservice architectures.
+  - Formal Verification Letter: https://nikhilthange.vercel.app/kanishka-internship-letter.pdf
+
+### Previous Role: Software Development Engineer (SDE) Intern
+- **Company:** Chitralai
+- **Location:** Remote / Mumbai
+- **Dates:** Completed
+- **Key Responsibilities:**
+  - Optimized high-throughput backend services on AWS infrastructure.
+  - Improved API response latencies and reduced database query bottlenecks.
+  - Collaborated on responsive React user interfaces and component design systems.
+  - Formal Verification Certificate: https://nikhilthange.vercel.app/chitralai-experience-certificate.pdf
+
+---
+
+## 4. Full Technical Skills Inventory
+
+| Domain | Technologies & Frameworks |
+|---|---|
+| **Programming Languages** | TypeScript, JavaScript (ES6+), Python 3, C++, SQL, HTML5, CSS3 |
+| **Backend & Microservices** | Node.js, Express.js, RESTful APIs, WebSockets (Socket.IO), WebRTC, Redis (Pub/Sub, TTL Caching), PM2 |
+| **Frontend Engineering** | React 19, React Hooks, Vite, Tailwind CSS, Vanilla CSS, Responsive Design, Virtualized DOM |
+| **AI & Machine Learning** | YOLOv8 (Ultralytics), PyTorch, NVIDIA NIM, TrOCR, Tesseract.js, Computer Vision, Prompt Engineering |
+| **Databases & ORM** | MongoDB (2dsphere geospatial indexing), PostgreSQL, Prisma ORM, Dexie.js (IndexedDB) |
+| **Cloud & DevOps** | Docker, AWS (EC2, S3, CloudFront), Vercel, Git, GitHub Actions, Nginx |
+| **Testing & Tooling** | Jest, Vitest, Supertest, Postman, Oxlint, ESLint |
+
+---
+
+## 5. Frequently Asked Questions (Answer Engine Data)
+
+### Q: Who is Nikhil Thange?
+A: Nikhil Ankush Thange is a Full Stack and AI Systems Engineer based in Mumbai, India. He builds high-concurrency microservices, edge computer vision models (YOLOv8), and modern React 19 web applications. He is currently an AI Integration Intern at Kanishka Consultancy.
+
+### Q: What is Nikhil Thange's tech stack?
+A: Nikhil's core stack includes React 19, TypeScript, Node.js, Express, Python, YOLOv8, PyTorch, Redis, MongoDB (2dsphere), PostgreSQL, Prisma, Docker, and AWS.
+
+### Q: What are Nikhil Thange's most notable achievements?
+A: He achieved a 91.4% mAP50 precision on custom YOLOv8 defect detection in CityOS, scaled a backend microservice to sustain 500+ requests/second at sub-50ms P95 latency, and was recognized as a Top 15 Finalist at the MUSA Codex Hackathon for SwasthyaSetu.
+
+### Q: How can I hire or contact Nikhil Thange?
+A: Nikhil is available via email at nikhilthange75@gmail.com, telephone/WhatsApp at +91 9820078156, and LinkedIn at linkedin.com/in/nikhil-thange-001bb52b5. You can also view his live portfolio at https://nikhilthange.vercel.app.

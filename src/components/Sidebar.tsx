@@ -12,7 +12,8 @@ import {
   X, 
   MapPin, 
   Clock,
-  Download
+  Download,
+  HelpCircle
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './Icons';
@@ -33,12 +34,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ onOpenTerminal }) => {
     { id: 'projects', label: '03 // PROJECTS', icon: <FolderGit2 className="w-4 h-4" /> },
     { id: 'skills', label: '04 // SKILLS', icon: <Cpu className="w-4 h-4" /> },
     { id: 'resume', label: '05 // RESUME', icon: <FileText className="w-4 h-4" /> },
-    { id: 'contact', label: '06 // CONTACT', icon: <Send className="w-4 h-4" /> },
+    { id: 'faq', label: '06 // FAQ', icon: <HelpCircle className="w-4 h-4" /> },
+    { id: 'contact', label: '07 // CONTACT', icon: <Send className="w-4 h-4" /> },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'resume', 'contact'];
+      const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'resume', 'faq', 'contact'];
       const scrollPosition = window.scrollY + 250;
 
       for (const section of sections) {

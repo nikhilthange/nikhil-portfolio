@@ -1,0 +1,22 @@
+{
+  "name": "Nikhil Thange | Full Stack & AI Systems Engineer",
+  "short_name": "Nikhil Thange",
+  "description": "Production engineering portfolio of Nikhil Ankush Thange. High-concurrency microservices, YOLOv8 computer vision, and reactive React 19 architectures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00D9FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-preview.png",
+      "sizes": "1200x675",
+      "type": "image/png"
+    }
+  ]
+}

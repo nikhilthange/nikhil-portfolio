@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Root Homepage -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nikhilthange.vercel.app/og-preview.png</image:loc>
+      <image:title>Nikhil Thange - Full Stack &amp; AI Systems Engineer Portfolio</image:title>
+      <image:caption>Engineering portfolio of Nikhil Ankush Thange specializing in distributed microservices and computer vision.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Projects Section -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#projects</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Experience & Internships Section -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#experience</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Resume & Verified Credentials -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#resume</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- AEO Knowledge Base & FAQ -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#faq</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Technical Skills & Architecture Section -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#skills</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- About Engineer Dossier -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#about</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact & Recruiter Dispatch -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/#contact</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Direct PDF Resume Asset -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/resume.pdf</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Machine-Readable LLM Specification (GEO) -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/llms.txt</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Full AI Knowledge Context (GEO) -->
+  <url>
+    <loc>https://nikhilthange.vercel.app/llms-full.txt</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+</urlset>

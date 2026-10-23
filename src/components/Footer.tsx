@@ -45,6 +45,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerminal }) => {
           </button>
         </div>
 
+        {/* Discovery & AI Indexing Links */}
+        <div className="flex items-center gap-3 text-[11px] font-mono text-slate-500">
+          <a href="#faq" className="hover:text-[#00D9FF] transition-colors">
+            FAQ
+          </a>
+          <span>•</span>
+          <a href="/llms.txt" target="_blank" rel="noreferrer" className="hover:text-[#00D9FF] transition-colors">
+            llms.txt
+          </a>
+          <span>•</span>
+          <a href="/sitemap.xml" target="_blank" rel="noreferrer" className="hover:text-[#00D9FF] transition-colors">
+            sitemap.xml
+          </a>
+        </div>
+
         {/* Channels & Back to Top */}
         <div className="flex items-center gap-4">
           <a

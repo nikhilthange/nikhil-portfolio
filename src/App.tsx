@@ -9,6 +9,7 @@ import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Skills } from './components/Skills';
 import { Resume } from './components/Resume';
+import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { InteractiveTerminal } from './components/InteractiveTerminal';
@@ -88,7 +89,10 @@ export const App: React.FC = () => {
           {/* 05 // RESUME */}
           <Resume />
 
-          {/* 06 // CONTACT */}
+          {/* 06 // FAQ & KNOWLEDGE MATRIX (AEO) */}
+          <FAQ onOpenTerminal={() => setIsTerminalOpen(true)} />
+
+          {/* 07 // CONTACT */}
           <Contact />
         </main>
 
